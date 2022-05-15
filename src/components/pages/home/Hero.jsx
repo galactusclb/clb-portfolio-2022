@@ -25,7 +25,7 @@ const letterAnimation = {
     }
 }
 
-const Hero = () => {
+const Hero = ({ loading }) => {
 
     const [playMarquee, setPlayMarquee] = useState(false);
 
@@ -38,9 +38,20 @@ const Hero = () => {
     return (
         <motion.div className={style['clb-main']} variants={banner}>
 
-            <div className={`${style['clb-hero-img']}`}>
-                <img src={`${process.env.PUBLIC_URL}/images/propic-800-min.png`} alt="" />
-            </div>
+            {
+                !loading && (
+                    <div className={`${style['clb-hero-img']}`}>
+                        <motion.img
+                            src={`${process.env.PUBLIC_URL}/images/propic-800-min.png`} alt=""
+                            layoutId='main-image-1'
+                            transition={{
+                                ease: [.6, 0.01, -0.05, 0.95],
+                                duration: 1.6
+                            }}
+                        />
+                    </div>
+                )
+            }
 
             <div className="container-fluid">
                 <div className={`${style['clb-hero-center']} row justify-content-end align-items-center`}>
