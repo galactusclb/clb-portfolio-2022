@@ -1,5 +1,76 @@
-@import "../../abstracts/_variables.scss";
+@import "assets/styles/abstracts/_variables.scss";
+
+// $hero-background-color : #999D9E;
+$hero-background-color : #FFFEFD;
+
+$hero-black : #1B1C1E;
 
 .clb-main{
-    background: $primary-color;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: $hero-background-color;
+    color: $hero-black;
+    // background: red;
+    // color: #fff;
+
+    .clb-hero-img{
+        position: absolute;
+        height: 105vh;
+        left: -5px;
+        bottom: -80px;
+        // transform: translate(-50%);
+
+        img{
+            height: 100%;
+        }
+    }
+
+    .clb-hero-center{
+        min-height: 75vh;
+        
+        h4{
+            &:nth-child(1){
+                font-size: 2.5rem;
+            }
+            
+            &:nth-child(2){
+                font-size: 7rem;
+                font-weight: 600;
+            }
+            
+        }
+
+        p{
+            font-size: 3.5em;
+        }
+
+        .abuot-me{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            color: $hero-background-color;
+            background: $hero-black;
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.marquee-text{
+    position: absolute;
+    bottom: -40px;
+}
+
+.row-title,.row-letter{
+    font-size: 26rem;
+    font-weight: 500;
+    position: relative;
+    letter-spacing: -0.8rem;
+    display: inline-block;
+    white-space: nowrap;
+    line-height: 1.25;
+}
+
+.row-title{
+    padding: 0 8vw;
 }
