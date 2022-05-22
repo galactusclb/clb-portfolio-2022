@@ -47,7 +47,7 @@ const Hero = ({ loading }) => {
     return (
         <motion.div className={style['clb-main']} variants={banner}>
 
-            {/* {
+            {
                 !loading && (
                     <div className={`${style['clb-hero-img']}`}>
                         <motion.img
@@ -60,7 +60,7 @@ const Hero = ({ loading }) => {
                         />
                     </div>
                 )
-            } */}
+            }
 
             <div className="container-fluid">
                 <div className={`${style['clb-hero-center']} row justify-content-end align-items-center`}>
@@ -135,7 +135,14 @@ const Hero = ({ loading }) => {
                 </div>
 
             </div>
-            <div className={`${style['clb-hero-bottom']}`}>
+            <div className={`${style['clb-hero-bottom']}`}
+            // style={{
+            //     backgroundImage: `url(${process.env.PUBLIC_URL}/images/propic-800-min.png)`,
+            //     backgroundRepeat: "no-repeat",
+            //     backgroundPosition: "left -6px bottom -80px",
+            //     backgroundSize: "79vh"
+            // }}
+            >
                 <div className={`${style['clb-hero-bottom-inner']}`}>
                     <BannerRowCenter playMarquee={playMarquee} />
                     <div className={`${style['clb-bottom-div']}`}>
@@ -149,8 +156,15 @@ const Hero = ({ loading }) => {
 
 const BannerRowCenter = ({ playMarquee, customClass = null }) => {
     return (
-        <div className={`d-flex flex-row flex-nowrap marquee row-title ${playMarquee && "animate"} ${style['marquee-text']} ${style[customClass]}`}>
-            <div className="marquee__inner">
+        <div className={`d-flex flex-row flex-nowrap marquee row-title ${playMarquee && "animate"} ${style['marquee-text']} ${style[customClass]}`}
+        // style={{
+        //     backgroundImage: `url(${process.env.PUBLIC_URL}/images/propic-800-min.png)`,
+        //     backgroundRepeat: "no-repeat",
+        //     backgroundPosition: "left -6px bottom -80px",
+        //     backgroundSize: "79vh"
+        // }}
+        >
+            <div className="marquee__inner" >
                 <AnimatedLetters title={"Lakshan"} disabled />
                 <AnimatedLetters title={"Chanaka"} />
                 <AnimatedLetters title={"Lakshan"} disabled />
@@ -166,6 +180,13 @@ const AnimatedLetters = ({ title, disabled }) => (
         variants={disabled ? null : banner}
         initial="initial"
         animate="animate"
+    // style={{
+    //     backgroundImage: `url(${process.env.PUBLIC_URL}/images/propic-800-min.png)`,
+    //     backgroundRepeat: "no-repeat",
+    //     backgroundPosition: "left -6px bottom -80px",
+    //     backgroundSize: "79vh"
+    // }}
+
     >
         {[...title].map((letter) => (
             <motion.span
