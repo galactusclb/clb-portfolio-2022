@@ -4,6 +4,7 @@ import { motion, AnimatePresence, AnimateSharedLayout } from 'framer-motion'
 import Loader from 'components/pages/home/Loader'
 import Hero from '../components/pages/home/Hero'
 import HomeIntro from 'components/pages/home/HomeIntro'
+import WhatIDo from 'components/pages/home/WhatIDo'
 
 
 const Home = () => {
@@ -45,6 +46,7 @@ const Home = () => {
                         // </div> */}
 
                             <HomeIntro />
+                            <WhatIDo />
                         </>
 
                     )
