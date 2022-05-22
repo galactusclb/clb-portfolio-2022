@@ -12,6 +12,15 @@ const banner = {
     }
 }
 
+const hero_img = {
+    initial: {
+        x: -100
+    },
+    animate: {
+        x: 0
+    }
+}
+
 const letterAnimation = {
     initial: {
         y: 400,
@@ -38,7 +47,7 @@ const Hero = ({ loading }) => {
     return (
         <motion.div className={style['clb-main']} variants={banner}>
 
-            {
+            {/* {
                 !loading && (
                     <div className={`${style['clb-hero-img']}`}>
                         <motion.img
@@ -51,7 +60,7 @@ const Hero = ({ loading }) => {
                         />
                     </div>
                 )
-            }
+            } */}
 
             <div className="container-fluid">
                 <div className={`${style['clb-hero-center']} row justify-content-end align-items-center`}>
@@ -126,16 +135,21 @@ const Hero = ({ loading }) => {
                 </div>
 
             </div>
-            <div className="">
-                <BannerRowCenter playMarquee={playMarquee} />
+            <div className={`${style['clb-hero-bottom']}`}>
+                <div className={`${style['clb-hero-bottom-inner']}`}>
+                    <BannerRowCenter playMarquee={playMarquee} />
+                    <div className={`${style['clb-bottom-div']}`}>
+                        <BannerRowCenter playMarquee={playMarquee} customClass="outline-text" />
+                    </div>
+                </div>
             </div>
         </motion.div>
     )
 }
 
-const BannerRowCenter = ({ playMarquee }) => {
+const BannerRowCenter = ({ playMarquee, customClass = null }) => {
     return (
-        <div className={`d-flex flex-row flex-nowrap marquee row-title ${playMarquee && "animate"} ${style['marquee-text']}`}>
+        <div className={`d-flex flex-row flex-nowrap marquee row-title ${playMarquee && "animate"} ${style['marquee-text']} ${style[customClass]}`}>
             <div className="marquee__inner">
                 <AnimatedLetters title={"Lakshan"} disabled />
                 <AnimatedLetters title={"Chanaka"} />

@@ -3,6 +3,7 @@ import { motion, AnimatePresence, AnimateSharedLayout } from 'framer-motion'
 
 import Loader from 'components/pages/home/Loader'
 import Hero from '../components/pages/home/Hero'
+import HomeIntro from 'components/pages/home/HomeIntro'
 
 
 const Home = () => {
@@ -24,8 +25,9 @@ const Home = () => {
                             <Loader setLoading={setLoading} />
                         </motion.div>
                     ) : (
-                        // <div className='' style={{ position: "relative" }}>
-                        <Hero loading={loading} />
+                        <>
+                            <Hero loading={loading} />
+                            {/* // <div className='' style={{ position: "relative" }}>
                         //     {
                         //         !loading && (
                         //             <div className={`${style['clb-hero-img']}`}>
@@ -40,7 +42,11 @@ const Home = () => {
                         //             </div>
                         //         )
                         //     }
-                        // </div>
+                        // </div> */}
+
+                            <HomeIntro />
+                        </>
+
                     )
                 }
             </AnimatePresence>
