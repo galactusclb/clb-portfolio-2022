@@ -7,7 +7,7 @@ $hero-black : #1B1C1E;
 
 .clb-main{
     position: relative;
-    min-height: 100vh;
+    max-height: 100vh;
     overflow: hidden;
     background: $hero-background-color;
     color: $hero-black;
@@ -16,9 +16,9 @@ $hero-black : #1B1C1E;
 
     .clb-hero-img{
         position: absolute;
-        height: 105vh;
+        height: 100vh;
         left: -5px;
-        bottom: -80px;
+        bottom: -30px;
         // transform: translate(-50%);
 
         img{
@@ -28,6 +28,7 @@ $hero-black : #1B1C1E;
 
     .clb-hero-center{
         min-height: 63vh;
+        margin-top: 10vh;
         
         h4{
             &:nth-child(1){
@@ -58,7 +59,7 @@ $hero-black : #1B1C1E;
     .clb-hero-bottom{
         // position: absolute;
         position: relative;
-        // bottom: -40px;
+        bottom: 60px;
 
         .clb-hero-bottom-inner{
             position: relative;

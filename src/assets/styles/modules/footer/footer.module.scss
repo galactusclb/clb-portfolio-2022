@@ -1,0 +1,53 @@
+@import "assets/styles/abstracts/_variables.scss";
+
+footer{
+    background-color: rgb(233, 234, 235);
+
+    .clb-big-tittle{
+        padding-top: clamp(5em, 21vh, 12em);
+        padding-bottom: clamp(5em, 21vh, 12em);
+    
+        h2{
+            font-size: 10rem;
+            max-width: 65%;
+        }
+    }
+
+    .clb-contact-form{
+        
+        form{
+            width: 60%;
+            padding-bottom: 10rem;
+            
+            .form-item{
+                padding-bottom: 6rem;
+
+                &.last{
+                    padding-bottom: 3rem;
+                }
+    
+                h5{
+                    color: #999D9E;
+                }
+    
+                h4{
+                    font-size: 2.8rem;
+                    font-weight: 500;
+                    width: 85%;
+                    padding-bottom: 1.4rem;
+                    // border-bottom: 1px solid rgba(28, 29, 32, 0.175);
+                }
+    
+                input.clb-form-input, textarea{
+                    background: none;
+                    border: none;
+                    border-bottom: 1px solid rgba(28, 29, 32, 0.175);
+                    font-size: 2rem;
+                    padding-left: 3rem;
+                    padding-right: 3rem;
+                }
+            }
+        }
+
+    }
+}

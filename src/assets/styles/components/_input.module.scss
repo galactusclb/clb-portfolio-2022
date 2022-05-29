@@ -1,0 +1,21 @@
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+textarea {
+	padding-top: 13px !important;
+	padding-bottom: 13px !important;
+	border-color: transparent;
+	background: transparent;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+
+    &:focus{
+        box-shadow : none
+    }
+
+	&:disabled, &[readonly] {
+		background-color: #e9ecef !important;
+		opacity: 1;
+	}
+}
