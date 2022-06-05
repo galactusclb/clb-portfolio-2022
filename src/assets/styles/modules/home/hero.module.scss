@@ -100,12 +100,10 @@ $hero-black : #1B1C1E;
     display: inline-block;
     white-space: nowrap;
     line-height: 1.25;
-    // background-clip: text;
-    // -webkit-background-clip: text;
-    // // color: transparent !important;
 
+    // transparent outline text
     color: #ffffff00 !important;
-        -webkit-text-stroke : 3px $background !important;
+    -webkit-text-stroke : 3px $background !important;
 }
 
 .row-title{
