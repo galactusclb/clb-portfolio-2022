@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 
 import style from 'assets/styles/modules/home/hero.module.scss'
 import { banner, letterAnimation } from 'animations/home/animation_hero';
+import MagneticButton from 'components/common/button/MagneticButton';
+import useHover from 'utils/useHover';
 
 
 
@@ -10,100 +12,14 @@ const Hero = ({ loading }) => {
 
     const [playMarquee, setPlayMarquee] = useState(false);
 
-    // magnetic button - start
-    const lerp = (current, target, factor) => {
-        return current * (1 - factor) + target * factor
-    }
-
-    let mousePosition = { x: 0, y: 0 }
-    // let [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-
-    window.addEventListener("mouseover", (e) => {
-        mousePosition.x = e.pageX
-        mousePosition.y = e.pageY
-
-        // console.log(e.pageX, e.pageY);
-    })
-
-    const calculateDistance = (x1, y1, x2, y2) => {
-        return Math.hypot(x1 - x2, y1 - y2)
-    }
-
-    class MagneticObject {
-        constructor(domElement) {
-            this.domElement = domElement
-            this.boundingClientRect = this.domElement.getBoundingClientRect()
-            this.triggerArea = 200;
-            this.interpolationFactor = 0.8;
-
-            this.lerpingData = {
-                x: { current: 0, target: 0 },
-                y: { current: 0, target: 0 }
-            }
-            this.resize()
-            this.render()
-        }
-
-        resize() {
-            window.addEventListener("resize", (e) => {
-                this.boundingClientRect = this.domElement.getBoundingClientRect()
-            })
-        }
-
-        render() {
-            const distanceFromMouseToCenter = calculateDistance(
-                mousePosition.x,
-                mousePosition.y,
-                this.boundingClientRect.left + this.boundingClientRect?.width / 2,
-                this.boundingClientRect.top + this.boundingClientRect?.height / 2,
-            )
-            console.log(distanceFromMouseToCenter);
-
-            let targetHolder = { x: 0, y: 0 };
-
-            if (distanceFromMouseToCenter < this.triggerArea) {
-                // this.domElement.classList.add("focus");
-                targetHolder.x =
-                    (mousePosition.x -
-                        (this.boundingClientRect.left +
-                            this.boundingClientRect.width / 2)) *
-                    0.1;
-                targetHolder.y =
-                    (mousePosition.y -
-                        (this.boundingClientRect.top +
-                            this.boundingClientRect.height / 2)) *
-                    0.1;
-                console.log(targetHolder);
-            } else {
-                // this.domElement.classList.remove("focus");
-            }
-            this.lerpingData["x"].target = targetHolder.x;
-            this.lerpingData["y"].target = targetHolder.y;
-
-            for (const item in this.lerpingData) {
-                this.lerpingData[item].current = lerp(
-                    this.lerpingData[item].current,
-                    this.lerpingData[item].target,
-                    this.interpolationFactor
-                );
-            }
-
-            this.domElement.style.transform = `translate(${this.lerpingData["x"].current}px, ${this.lerpingData["y"].current}px)`;
-
-            window.requestAnimationFrame(() => this.render())
-        }
-    }
-
-    // magnetic button - end
-
+    const [hoverRef, isHovered] = useHover();
 
     useEffect(() => {
         setTimeout(() => {
-            // setPlayMarquee(true);
+            setPlayMarquee(true);
         }, 1800)
 
-        const button = document.querySelector('.clb-magnetic-btn')
-        new MagneticObject(button)
+        console.log(hoverRef);
     }, []);
 
     return (
@@ -177,22 +93,25 @@ const Hero = ({ loading }) => {
                             >Full-Stack Web Developer</motion.p>
                         </div>
 
-                        <motion.div className={`${style['abuot-me']} row justify-content-center align-items-center mt-5 clb-magnetic-btn`}
-                            initial={{ scale: 0 }}
-                            animate={{ scale: 1 }}
-                            transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 1, delay: 2.2 }}>
-                            <motion.span
-                                className='text-center'
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                transition={{
-                                    ease: "easeInOut",
-                                    duration: 1,
-                                    delay: 2.8
-                                }}>
-                                About me
-                            </motion.span>
-                        </motion.div>
+                        <MagneticButton ref={hoverRef}>
+                            {/* Magnetic button */}
+                            <motion.div className={`${style['abuot-me']} row justify-content-center align-items-center mt-5 clb-magnetic-btn`}
+                                initial={{ scale: 0 }}
+                                animate={{ scale: 1 }}
+                                transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 1, delay: 2.2 }}>
+                                <motion.span
+                                    className='text-center'
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{
+                                        ease: "easeInOut",
+                                        duration: 1,
+                                        delay: 2.8
+                                    }}>
+                                    About me
+                                </motion.span>
+                            </motion.div>
+                        </MagneticButton>
                     </div>
                 </div>
 
@@ -250,10 +169,11 @@ const AnimatedLetters = ({ title, disabled }) => (
     // }}
 
     >
-        {[...title].map((letter) => (
+        {[...title].map((letter, id) => (
             <motion.span
                 className={style['row-letter']}
                 variants={letterAnimation}
+                key={id}
             >
                 {letter}
             </motion.span>
