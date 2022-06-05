@@ -4,7 +4,7 @@ import React, { forwardRef, useEffect, useRef } from 'react'
 import useMousePosition from 'utils/useMousePosition';
 import { distance } from 'utils/utils';
 
-const MagneticButton = forwardRef((props, ref) => {
+const MagneticDOM = forwardRef((props, ref) => {
     const { mouseX, mouseY } = useMousePosition();
     const textRef = useRef();
     const fillControls = useAnimation();
@@ -16,12 +16,11 @@ const MagneticButton = forwardRef((props, ref) => {
         // console.log(props);
         // console.log(ref);
         if (ref.current !== null) {
-            console.log(ref);
             const node = ref.current;
 
             // New values for the translations
             const rect = node.getBoundingClientRect();
-            const distanceToTrigger = rect.width * 0.7;
+            const distanceToTrigger = 200;
 
             const distanceMouseButton = distance(
                 mouseX + window.scrollX,
@@ -33,8 +32,8 @@ const MagneticButton = forwardRef((props, ref) => {
             // Handle magnetic effect
             if (distanceMouseButton < distanceToTrigger) {
                 // Translate button position on hover
-                x = (mouseX + window.scrollX - (rect.left + rect.width / 2)) * 0.1;
-                y = (mouseY + window.scrollY - (rect.top + rect.height / 2)) * 0.1;
+                x = (mouseX + window.scrollX - (rect.left + rect.width / 2)) * 0.2;
+                y = (mouseY + window.scrollY - (rect.top + rect.height / 2)) * 0.2;
                 node.style.transform = `translate(${x / 4}px, ${y / 4}px)`;
                 ref.current.style.transform = `translate(${x / 4}px, ${y / 4}px)`;
                 ref.current.style.transition = `0.15s`;
@@ -48,7 +47,7 @@ const MagneticButton = forwardRef((props, ref) => {
     }, [mouseX, mouseY, ref, textRef, fillControls])
 
     return (
-        <div ref={ref}>
+        <div ref={ref} style={{ display: "inline-block" }} href={props.href}>
             <span ref={textRef}>
                 {props.children}
             </span>
@@ -56,4 +55,4 @@ const MagneticButton = forwardRef((props, ref) => {
     )
 })
 
-export default MagneticButton
+export default MagneticDOM

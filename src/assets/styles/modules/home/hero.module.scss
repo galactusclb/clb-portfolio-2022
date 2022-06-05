@@ -53,6 +53,13 @@ $hero-black : #1B1C1E;
             color: $hero-background-color;
             background: $hero-black;
             font-size: 1.8rem;
+            transition: 0.5s;
+            cursor: pointer;
+
+            &:hover{
+                background: $white;
+                color: $hero-black;
+            }
         }
     }
 

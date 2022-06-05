@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import style from 'assets/styles/modules/home/hero.module.scss'
 import { banner, letterAnimation } from 'animations/home/animation_hero';
-import MagneticButton from 'components/common/button/MagneticButton';
+import MagneticDOM from 'components/common/button/MagneticDOM';
 import useHover from 'utils/useHover';
 
 
@@ -19,7 +19,6 @@ const Hero = ({ loading }) => {
             setPlayMarquee(true);
         }, 1800)
 
-        console.log(hoverRef);
     }, []);
 
     return (
@@ -93,8 +92,8 @@ const Hero = ({ loading }) => {
                             >Full-Stack Web Developer</motion.p>
                         </div>
 
-                        <MagneticButton ref={hoverRef}>
-                            {/* Magnetic button */}
+                        {/* Magnetic button */}
+                        <MagneticDOM ref={hoverRef} onClick={() => console.log('clicked 1')}>
                             <motion.div className={`${style['abuot-me']} row justify-content-center align-items-center mt-5 clb-magnetic-btn`}
                                 initial={{ scale: 0 }}
                                 animate={{ scale: 1 }}
@@ -111,7 +110,7 @@ const Hero = ({ loading }) => {
                                     About me
                                 </motion.span>
                             </motion.div>
-                        </MagneticButton>
+                        </MagneticDOM>
                     </div>
                 </div>
 

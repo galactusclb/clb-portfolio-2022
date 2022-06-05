@@ -1,7 +1,13 @@
 import React from 'react'
+import { motion } from 'framer-motion';
+
 import style from 'assets/styles/modules/home/project-list.module.scss'
+import MagneticDOM from 'components/common/button/MagneticDOM'
+import useHover from 'utils/useHover';
 
 const ProjectsList = () => {
+    const [hoverRef3, isHovered] = useHover();
+
     return (
         <section className={`container ${style['clb-section']} px-0`}>
             <div className={`${style['clb-big-tittle']} container`}>
@@ -148,6 +154,25 @@ const ProjectsList = () => {
                     </div>
                 </div>
             </div>
+
+            <MagneticDOM ref={hoverRef3} onClick={() => console.log('clicked 1')}>
+                <motion.div className={` row justify-content-center align-items-center mt-5 clb-btn-circle`}
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 1, delay: 2.2 }}>
+                    <motion.span
+                        className='text-center'
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{
+                            ease: "easeInOut",
+                            duration: 1,
+                            delay: 2.8
+                        }}>
+                        About me
+                    </motion.span>
+                </motion.div>
+            </MagneticDOM>
         </section>
     )
 }
