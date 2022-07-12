@@ -5,6 +5,7 @@ import Loader from 'components/pages/home/Loader'
 import Hero from '../components/pages/home/Hero'
 import HomeIntro from 'components/pages/home/HomeIntro'
 import WhatIDo from 'components/pages/home/WhatIDo'
+import ProjectsList from 'components/pages/home/ProjectsList'
 
 
 const Home = () => {
@@ -47,6 +48,7 @@ const Home = () => {
 
                             <HomeIntro />
                             <WhatIDo />
+                            <ProjectsList />
                         </>
 
                     )

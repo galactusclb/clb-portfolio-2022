@@ -1,0 +1,120 @@
+@import "assets/styles/abstracts/_variables.scss";
+
+section.clb-section{
+    margin-bottom: 6rem;
+    
+    .clb-big-tittle{
+        padding-top: clamp(5em, 21vh, 12em);
+        padding-bottom: clamp(5em, 21vh, 12em);
+    
+        h2{
+            font-size: 10rem;
+            max-width: 85%;
+        }
+    }
+
+    .clb-project-list{
+        .clb-project-category{
+            button{
+                -webkit-box-shadow: inset 0px 0px 0px 1px $color-border;
+                box-shadow: inset 0px 0px 0px 1px $color-border;
+                border-radius: 3em;
+                min-width: 1em;
+                height: 4.25em;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 1.3em 2em;
+                font-size: 1.9em;
+
+                &.active{
+                    background: $black;
+                    color: $white;
+                }
+            }
+        }
+
+        .clb-projects{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr .5fr;
+            grid-gap: 77px;
+            margin-top: 7rem;
+            
+
+            .project-card{
+                 &:nth-child(even){
+                    // margin-top: 300px;
+                    position: relative;
+                    top: 250px;
+                }
+
+
+                .project-card-inner{
+                    position: relative;
+                    box-shadow: 0 20px 34px 0 rgb(191 192 195 / 37%);
+                    // margin-right: 3rem;
+
+                    .project-card-header{
+                        position: relative;
+                        min-height: 400px;
+                        width: 100%;
+                        background: red;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        overflow: hidden;
+    
+                        .project-showcase{
+                            max-width: 93%;
+                            // height: 90%;
+                            max-height: 380px;
+                            overflow: hidden;
+    
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+    
+                    .project-card-body{
+                        padding: 5rem 4rem;
+    
+                        h3{
+                            font-size: 3rem;
+                            font-weight: 600;
+                        }
+    
+                        .project-tags{
+                            gap: 0.7rem;
+    
+                            span{
+                                color: #C67A50;
+                                font-size: 1.6rem;
+                            }
+                        }
+    
+                        .project-info{
+                            .project-info-left{
+                                font-size: 1.8rem;
+    
+                            }
+    
+                            .project-info-right{
+                                width: 160px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .clb-projects-empty-space{
+                // padding: 6rem 0;
+                background: red;
+            }
+        }
+
+        
+    }
+}

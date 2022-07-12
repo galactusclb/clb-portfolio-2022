@@ -42,7 +42,6 @@ const Index = () => {
                                 Send it.
                             </span>
                         </button>
-
                     </div>
                 </form>
             </div>
