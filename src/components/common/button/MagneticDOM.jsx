@@ -29,8 +29,25 @@ const MagneticDOM = forwardRef((props, ref) => {
                 rect.top + rect.height / 2
             );
 
+            const buttonRangePlus = distance(
+                mouseX + window.scrollX + distanceToTrigger,
+                mouseY + window.scrollY + distanceToTrigger,
+                rect.left + rect.width / 2,
+                rect.top + rect.height / 2
+            );
+
+            const buttonRangeMinus = distance(
+                mouseX + window.scrollX - distanceToTrigger,
+                mouseY + window.scrollY - distanceToTrigger,
+                rect.left + rect.width / 2,
+                rect.top + rect.height / 2
+            );
+
+            // console.log(distanceMouseButton, buttonRangePlus, buttonRangeMinus);
             // Handle magnetic effect
+            // if (distanceMouseButton > buttonRangePlus && distanceMouseButton > buttonRangeMinus) {
             if (distanceMouseButton < distanceToTrigger) {
+
                 // Translate button position on hover
                 x = (mouseX + window.scrollX - (rect.left + rect.width / 2)) * 0.2;
                 y = (mouseY + window.scrollY - (rect.top + rect.height / 2)) * 0.2;
@@ -41,6 +58,7 @@ const MagneticDOM = forwardRef((props, ref) => {
                 // Restore initial position
                 node.style.transform = `translate(0, 0)`;
                 ref.current.style.transform = `translate(0, 0)`;
+                ref.current.style.transition = `0.15s`;
             }
         }
 
