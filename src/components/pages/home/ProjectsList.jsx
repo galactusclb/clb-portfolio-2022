@@ -155,7 +155,7 @@ const ProjectsList = () => {
                 </div>
             </div>
 
-            <MagneticDOM ref={hoverRef3} onClick={() => console.log('clicked 1')}>
+            {/* <MagneticDOM ref={hoverRef3} onClick={() => console.log('clicked 1')}>
                 <motion.div className={` row justify-content-center align-items-center mt-5 clb-btn-circle`}
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
@@ -172,7 +172,7 @@ const ProjectsList = () => {
                         About me
                     </motion.span>
                 </motion.div>
-            </MagneticDOM>
+            </MagneticDOM> */}
         </section>
     )
 }

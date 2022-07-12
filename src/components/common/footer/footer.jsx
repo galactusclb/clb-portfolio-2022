@@ -10,7 +10,7 @@ const Index = () => {
 
     return (
         <footer >
-            <MagneticDOM ref={hoverRef2} onClick={() => console.log('clicked 2')}>
+            {/* <MagneticDOM ref={hoverRef2} onClick={() => console.log('clicked 2')}>
                 <motion.div className={`row justify-content-center align-items-center mt-5 clb-btn-circle`}
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
@@ -27,12 +27,12 @@ const Index = () => {
                         About me
                     </motion.span>
                 </motion.div>
-            </MagneticDOM>
+            </MagneticDOM> */}
 
             <div className={`${style['clb-big-tittle']} container`}>
                 <h2>
                     Let’s work
-                    together
+                    together 👋
                 </h2>
             </div>
             <div className={`${style['clb-contact-form']} container`}>
@@ -64,14 +64,14 @@ const Index = () => {
                     </div>
                 </form>
 
-                {/* <MagneticDOM ref={hoverRef2} >
+                <MagneticDOM ref={hoverRef2} >
                     <button type='button' className={`clb-btn-circle row justify-content-center align-items-center mt-5`} onClick={() => console.log('clicked 2')}>
                         <span
                             className='text-center'>
                             Send it.
                         </span>
                     </button>
-                </MagneticDOM> */}
+                </MagneticDOM>
 
             </div>
         </footer>
