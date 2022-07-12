@@ -1,10 +1,34 @@
 import React from 'react'
+import { motion } from "framer-motion";
 
 import style from 'assets/styles/modules/footer/footer.module.scss'
+import MagneticDOM from '../button/MagneticDOM'
+import useHover from 'utils/useHover';
 
 const Index = () => {
+    const [hoverRef2, isHovered2] = useHover();
+
     return (
-        <footer>
+        <footer >
+            <MagneticDOM ref={hoverRef2} onClick={() => console.log('clicked 2')}>
+                <motion.div className={`row justify-content-center align-items-center mt-5 clb-btn-circle`}
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 1, delay: 2.2 }}>
+                    <motion.span
+                        className='text-center'
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{
+                            ease: "easeInOut",
+                            duration: 1,
+                            delay: 2.8
+                        }}>
+                        About me
+                    </motion.span>
+                </motion.div>
+            </MagneticDOM>
+
             <div className={`${style['clb-big-tittle']} container`}>
                 <h2>
                     Let’s work
@@ -35,15 +59,20 @@ const Index = () => {
                             rows={4} />
                     </div>
 
-                    <div className="d-flex justify-content-end">
-                        <button className={`clb-btn-circle row justify-content-center align-items-center mt-5`}>
-                            <span
-                                className='text-center'>
-                                Send it.
-                            </span>
-                        </button>
+                    <div className="">
+
                     </div>
                 </form>
+
+                {/* <MagneticDOM ref={hoverRef2} >
+                    <button type='button' className={`clb-btn-circle row justify-content-center align-items-center mt-5`} onClick={() => console.log('clicked 2')}>
+                        <span
+                            className='text-center'>
+                            Send it.
+                        </span>
+                    </button>
+                </MagneticDOM> */}
+
             </div>
         </footer>
     )

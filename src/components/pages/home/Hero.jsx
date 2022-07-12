@@ -2,46 +2,23 @@ import React, { useEffect, useState } from 'react'
 import { motion } from "framer-motion";
 
 import style from 'assets/styles/modules/home/hero.module.scss'
+import { banner, letterAnimation } from 'animations/home/animation_hero';
+import MagneticDOM from 'components/common/button/MagneticDOM';
+import useHover from 'utils/useHover';
 
-const banner = {
-    animate: {
-        transition: {
-            delayChildren: 0.4,
-            staggerChildren: 0.1
-        }
-    }
-}
 
-const hero_img = {
-    initial: {
-        x: -100
-    },
-    animate: {
-        x: 0
-    }
-}
-
-const letterAnimation = {
-    initial: {
-        y: 400,
-    },
-    animate: {
-        y: 0,
-        transition: {
-            ease: [.6, .01, -.05, .95],
-            duration: 1
-        }
-    }
-}
 
 const Hero = ({ loading }) => {
 
     const [playMarquee, setPlayMarquee] = useState(false);
 
+    const [hoverRef, isHovered] = useHover();
+
     useEffect(() => {
         setTimeout(() => {
             setPlayMarquee(true);
         }, 1800)
+
     }, []);
 
     return (
@@ -115,22 +92,25 @@ const Hero = ({ loading }) => {
                             >Full-Stack Web Developer</motion.p>
                         </div>
 
-                        <motion.div className={`${style['abuot-me']} row justify-content-center align-items-center mt-5`}
-                            initial={{ scale: 0 }}
-                            animate={{ scale: 1 }}
-                            transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 1, delay: 2.2 }}>
-                            <motion.span
-                                className='text-center'
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                transition={{
-                                    ease: "easeInOut",
-                                    duration: 1,
-                                    delay: 2.8
-                                }}>
-                                About me
-                            </motion.span>
-                        </motion.div>
+                        {/* Magnetic button */}
+                        <MagneticDOM ref={hoverRef} onClick={() => console.log('clicked 1')}>
+                            <motion.div className={`${style['abuot-me']} row justify-content-center align-items-center mt-5 clb-magnetic-btn`}
+                                initial={{ scale: 0 }}
+                                animate={{ scale: 1 }}
+                                transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 1, delay: 2.2 }}>
+                                <motion.span
+                                    className='text-center'
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{
+                                        ease: "easeInOut",
+                                        duration: 1,
+                                        delay: 2.8
+                                    }}>
+                                    About me
+                                </motion.span>
+                            </motion.div>
+                        </MagneticDOM>
                     </div>
                 </div>
 
@@ -188,10 +168,11 @@ const AnimatedLetters = ({ title, disabled }) => (
     // }}
 
     >
-        {[...title].map((letter) => (
+        {[...title].map((letter, id) => (
             <motion.span
                 className={style['row-letter']}
                 variants={letterAnimation}
+                key={id}
             >
                 {letter}
             </motion.span>
