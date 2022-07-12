@@ -1,0 +1,6 @@
+@import "assets/styles/abstracts/_variables.scss";
+
+section{
+    padding-top: clamp(5em, 21vh, 12em);
+    padding-bottom: clamp(5em, 21vh, 12em)
+}

@@ -1,14 +1,14 @@
 @import "assets/styles/abstracts/_variables.scss";
 
 // $hero-background-color : #999D9E;
-$hero-background-color : #FFFEFD;
+$hero-background-color : #dd9348;
 
 $hero-black : #1B1C1E;
 
 .clb-main{
     position: relative;
     min-height: 100vh;
-    overflow-x: hidden;
+    overflow: hidden;
     background: $hero-background-color;
     color: $hero-black;
     // background: red;
@@ -27,7 +27,7 @@ $hero-black : #1B1C1E;
     }
 
     .clb-hero-center{
-        min-height: 75vh;
+        min-height: 63vh;
         
         h4{
             &:nth-child(1){
@@ -54,11 +54,41 @@ $hero-black : #1B1C1E;
             font-size: 1.8rem;
         }
     }
+
+    .clb-hero-bottom{
+        // position: absolute;
+        position: relative;
+        // bottom: -40px;
+
+        .clb-hero-bottom-inner{
+            position: relative;
+
+            .clb-bottom-div{
+                position: relative;
+                top: 0;
+                // display: block;
+                width: 500px;
+                max-width: 500px;
+                height: 30rem;
+                background:rgba(250, 250, 250, 0);
+                
+               
+                overflow: hidden;
+            }
+        }
+
+    }
 }
 
 .marquee-text{
     position: absolute;
-    bottom: -40px;
+    // bottom: -40px;
+
+    &.outline-text{
+        // color: #ffffff00 !important;
+        // -webkit-text-stroke : 3px $background !important;
+
+    }
 }
 
 .row-title,.row-letter{
@@ -69,6 +99,12 @@ $hero-black : #1B1C1E;
     display: inline-block;
     white-space: nowrap;
     line-height: 1.25;
+    // background-clip: text;
+    // -webkit-background-clip: text;
+    // // color: transparent !important;
+
+    color: #ffffff00 !important;
+        -webkit-text-stroke : 3px $background !important;
 }
 
 .row-title{

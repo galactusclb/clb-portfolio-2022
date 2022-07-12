@@ -34,7 +34,7 @@ const Loader = ({ setLoading }) => {
             // onAnimationComplete={() => setLoading(false)}
             >
 
-                <motion.div
+                {/* <motion.div
                     className={style['clb-loading-hero']}
                     variants={itemMain}>
                     <motion.img
@@ -47,7 +47,7 @@ const Loader = ({ setLoading }) => {
                         // }}
                         layoutId="main-image-1"
                     />
-                </motion.div>
+                </motion.div> */}
             </motion.div>
         </div>
     )
