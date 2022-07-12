@@ -12,7 +12,7 @@ $move-final: calc(-72%);
     display: flex;
     position: relative;
     transform: translateX($move-initial);
-    animation: marquee 11s linear infinite;
+    animation: marquee 15s linear infinite;
     animation-play-state: paused;
 
     @media (min-width: $layout-breakpoint-large) {
