@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import style from 'assets/styles/modules/home/hero.module.scss'
@@ -10,6 +11,7 @@ import useHover from 'utils/useHover';
 
 const Hero = ({ loading }) => {
 
+    let navigate = useNavigate();
     const [playMarquee, setPlayMarquee] = useState(false);
 
     const [hoverRef, isHovered] = useHover();
@@ -93,7 +95,10 @@ const Hero = ({ loading }) => {
                         </div>
 
                         {/* Magnetic button */}
-                        <MagneticDOM ref={hoverRef} onClick={() => console.log('clicked 1')}>
+                        <MagneticDOM ref={hoverRef} onClick={() => {
+                            navigate("../about", { replace: true })
+                            console.log("ff");
+                        }}>
                             <motion.div className={`${style['abuot-me']} row justify-content-center align-items-center mt-5 clb-magnetic-btn`}
                                 initial={{ scale: 0 }}
                                 animate={{ scale: 1 }}
