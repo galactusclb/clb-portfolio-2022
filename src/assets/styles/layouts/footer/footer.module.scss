@@ -1,7 +1,11 @@
 @import "assets/styles/abstracts/_variables.scss";
 
 footer{
+
+    $width : 50%;
+    
     background-color: var(--color-bg-gray);
+    padding-bottom: 15rem;
 
     .clb-big-tittle{
         padding-top: clamp(5em, 21vh, 12em);
@@ -9,15 +13,15 @@ footer{
     
         h2{
             font-size: 10rem;
-            max-width: 65%;
+            max-width: $width;
         }
     }
 
     .clb-contact-form{
         
         form{
-            width: 60%;
-            padding-bottom: 10rem;
+            width: $width;
+            padding-bottom: 5rem;
             
             .form-item{
                 padding-bottom: 6rem;
@@ -49,5 +53,9 @@ footer{
             }
         }
 
+    }
+
+    .footer-bottom{
+        max-width: $width;
     }
 }

@@ -64,15 +64,17 @@ const Index = () => {
                     </div>
                 </form>
 
-                <MagneticDOM ref={hoverRef2} >
-                    <button type='button' className={`clb-btn-circle row justify-content-center align-items-center mt-5`} onClick={() => console.log('clicked 2')}>
-                        <span
-                            className='text-center'>
-                            Send it.
-                        </span>
-                    </button>
-                </MagneticDOM>
+                <div className={`${style['footer-bottom']} d-flex justify-content-end`}>
+                    <MagneticDOM ref={hoverRef2} >
+                        <button type='button' className={`clb-btn-circle row justify-content-center align-items-center mt-0`} onClick={() => console.log('clicked 2')}>
+                            <span
+                                className='text-center'>
+                                Send it.
+                            </span>
+                        </button>
+                    </MagneticDOM>
 
+                </div>
             </div>
         </footer>
     )

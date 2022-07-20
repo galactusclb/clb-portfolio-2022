@@ -2,9 +2,14 @@
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    color: $white;
-    background: $black;
+    border-color: var(--bg-color-black);
+    background: var(--bg-color-black);
     font-size: 1.8rem;
+    
+    span{
+        color: var(--text-color-white);
+        word-wrap: break-word;
+    }
 }
 
 .clb-btn-rounded {

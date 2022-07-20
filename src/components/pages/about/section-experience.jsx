@@ -1,6 +1,8 @@
 import React from 'react'
 
 import style from 'assets/styles/modules/about-me/section-skill.module.scss'
+import MagneticDOM from 'components/common/button/MagneticDOM'
+import useHover from 'utils/useHover'
 
 const SectionExperience = () => {
 
@@ -11,6 +13,8 @@ const SectionExperience = () => {
         'NodeJs',
         'Laravel'
     ]
+
+    const [hoverRef, isHovered] = useHover();
 
     return (
         <section className={`${style['section-main']} container`}>

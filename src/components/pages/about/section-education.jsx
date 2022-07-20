@@ -1,16 +1,8 @@
 import React from 'react'
 
-import style from 'assets/styles/modules/about-me/section-skill.module.scss'
+import style from 'assets/styles/modules/about-me/section-education.module.scss'
 
 const SectionEducation = () => {
-
-    const skills = [
-        'Angular',
-        'ReactJs',
-        'NextJs',
-        'NodeJs',
-        'Laravel'
-    ]
 
     return (
         <section className={`${style['section-main']} container`}>

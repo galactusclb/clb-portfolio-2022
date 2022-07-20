@@ -2,6 +2,9 @@
 
 :root{
     --color-bg-gray : #{$bg-color-gray};
+    --text-color-white : #{$white};
     --text-color-black : #{$text-color-black};
     --text-color-blue : #{$text-color-blue};
+
+    --bg-color-black : #{$black};
 }
