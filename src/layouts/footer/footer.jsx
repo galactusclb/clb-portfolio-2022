@@ -1,8 +1,8 @@
 import React from 'react'
 import { motion } from "framer-motion";
 
-import style from 'assets/styles/modules/footer/footer.module.scss'
-import MagneticDOM from '../button/MagneticDOM'
+import style from 'assets/styles/layouts/footer/footer.module.scss'
+import MagneticDOM from 'components/common/button/MagneticDOM'
 import useHover from 'utils/useHover';
 
 const Index = () => {
