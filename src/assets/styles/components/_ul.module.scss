@@ -1,0 +1,22 @@
+
+ul{
+    list-style: none;
+
+    & li{
+        position: relative;
+        // padding-left: 0em;
+        
+        &::before {
+            position: absolute;
+            // content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+            content: "";
+            display: inline-block; /* Needed to add space between the bullet and the text */
+            width: 1em; /* Also needed for space (tweak if needed) */
+            height: 1em;
+            border-radius: 50%;
+            background: var(--text-color-blue);
+            margin-left: -2em; /* Also needed for space (tweak if needed) */
+            margin-top: 1em; /* Also needed for space (tweak if needed) */
+          }
+    }
+}

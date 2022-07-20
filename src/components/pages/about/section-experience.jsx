@@ -29,6 +29,18 @@ const SectionExperience = () => {
                             <h5>Nova Solutions (Pvt) Ltd</h5>
                         </div>
                     </div>
+
+                    <ul className='mt-4'>
+                        <li><p>
+                            Gained knowledge and implemented end-to-end testing for web applications.
+                        </p></li>
+                        <li><p>
+                            Designed user Interfaces and implemented the designs with code.
+                        </p></li>
+                        <li><p>
+                            Implemented and validated new functionalities on frontend in React JS based web applications.
+                        </p></li>
+                    </ul>
                 </div>
             </div>
         </section>
