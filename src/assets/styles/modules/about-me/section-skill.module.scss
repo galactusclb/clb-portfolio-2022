@@ -1,0 +1,49 @@
+@import "assets/styles/abstracts/_variables.scss";
+
+section.section-main{
+    position: relative;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    h3{
+        font-size: 3rem;
+        font-weight: 700;
+    }
+
+    .section-left{
+        // .img-wrapper{
+        //     display: block;
+        //     height: 420px;
+        //     width: 350px;
+        //     background: var(--color-bg-gray);
+        //     border-radius: 8px;
+        //     overflow: hidden;
+        // }
+        .skill-list{
+            gap: 1.5rem;
+        }
+    }
+
+    .section-right{
+        .h1-wrapper{
+            h1{
+                font-size: 18rem;
+                line-height: 85%;
+                font-weight: 700;
+            }
+        }
+
+        .section-bottom{
+            margin-top: 8rem;
+
+            p{
+                max-width: 500px;
+                font-size: 1.8rem;
+
+                &:nth-child(2){
+                    color: #7C7C7C;
+                }
+            }
+        }
+    }
+}

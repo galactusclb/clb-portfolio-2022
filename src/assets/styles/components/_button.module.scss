@@ -1,8 +1,26 @@
-.clb-btn-circle{
+.clb-btn-circle {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     color: $white;
     background: $black;
     font-size: 1.8rem;
+}
+
+.clb-btn-rounded {
+    -webkit-box-shadow: inset 0px 0px 0px 1px $color-border;
+    box-shadow: inset 0px 0px 0px 1px $color-border;
+    border-radius: 3em;
+    min-width: 1em;
+    // height: 4.25em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.3em 2em;
+    font-size: 1.9em;
+
+    &.active {
+        background: $black;
+        color: $white;
+    }
 }
