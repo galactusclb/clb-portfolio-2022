@@ -65,7 +65,7 @@ const MagneticDOM = forwardRef((props, ref) => {
     }, [mouseX, mouseY, ref, textRef, fillControls])
 
     return (
-        <div ref={ref} style={{ display: "inline-block" }} href={props.href}>
+        <div ref={ref} style={{ display: "inline-block" }} onClick={props?.onClick}>
             <span ref={textRef}>
                 {props.children}
             </span>
