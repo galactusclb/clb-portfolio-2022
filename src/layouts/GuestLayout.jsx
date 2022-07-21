@@ -1,16 +1,14 @@
-import Loader from 'components/pages/home/Loader';
 import { motion, AnimatePresence, AnimateSharedLayout } from 'framer-motion';
 import React, { useEffect, useState } from 'react'
 import { Route, Routes } from 'react-router-dom';
 import Footer from './footer/footer';
 import Header from './header/header';
+import PageLoader from './page-loarder/PageLoader';
 
 import routes from './RoutesMap';
 
 const GuestLayout = () => {
     const [loading, setLoading] = useState(true)
-
-
 
     const getRoutes = (routes) => {
         return routes.map((prop, key) => {
@@ -32,8 +30,7 @@ const GuestLayout = () => {
                 {
                     loading ? (
                         <motion.div key='loader'>
-                            <Loader setLoading={setLoading} />
-                            Loging
+                            <PageLoader setLoading={setLoading} />
                         </motion.div>
                     ) : (
                         <>

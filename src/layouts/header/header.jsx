@@ -18,7 +18,8 @@ const Header = () => {
                 <div className={`${style['clb-nav-links']} d-flex`}>
                     <div className={`${style['nav-link-item']}`} onClick={() => {
                         // navigate("../", { replace: true })
-                    }}>
+                    }}
+                        href="/auth/register">
                         Home
                     </div >
                     <div className={`${style['nav-link-item']}`} onClick={() => {
