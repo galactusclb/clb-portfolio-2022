@@ -1,0 +1,32 @@
+@import "assets/styles/abstracts/_variables.scss";
+
+.clb-main{
+    position: relative;
+    max-height: 100vh;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    overflow: hidden;
+
+    .section-right{
+        .h1-wrapper{
+            h1{
+                font-size: 18rem;
+                line-height: 85%;
+                font-weight: 700;
+            }
+        }
+
+        .section-bottom{
+            margin-top: 8rem;
+
+            p{
+                max-width: 500px;
+                font-size: 1.8rem;
+
+                &:nth-child(2){
+                    color: #7C7C7C;
+                }
+            }
+        }
+    }
+}

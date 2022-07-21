@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import reportWebVitals from './reportWebVitals';
-import Footer from 'components/common/footer/footer'
+import Footer from 'layouts/footer/footer'
 
 import {
   BrowserRouter as Router,

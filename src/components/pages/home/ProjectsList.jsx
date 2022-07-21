@@ -8,6 +8,14 @@ import useHover from 'utils/useHover';
 const ProjectsList = () => {
     const [hoverRef3, isHovered] = useHover();
 
+    const handleWheel = (event) => {
+        let currentTargetRect = event.currentTarget.getBoundingClientRect();
+        const event_offsetX = event.pageX - currentTargetRect.left,
+            event_offsetY = event.pageY - currentTargetRect.top;
+
+        console.log(event_offsetX, event_offsetY);
+    }
+
     return (
         <section className={`container ${style['clb-section']} px-0`}>
             <div className={`${style['clb-big-tittle']} container`}>
@@ -54,7 +62,7 @@ const ProjectsList = () => {
                                         <p>We did a complete redesign of Oxstreet online shop mobile experience: products exposure, catalogue, checkout and payment process.</p>
                                     </div>
                                     <div className={`${style['project-info-right']}`}>
-                                        <button className="clb-btn-circle" style={{ width: 120, height: 120 }}>
+                                        <button className="clb-btn-circle" style={{ width: 120, height: 120 }} onMouseMove={handleWheel}>
                                             View
                                         </button>
                                     </div>
