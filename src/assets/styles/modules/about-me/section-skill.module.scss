@@ -1,0 +1,21 @@
+@import "assets/styles/abstracts/_variables.scss";
+
+section.section-main{
+    position: relative;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    h3{
+        font-size: 3rem;
+        font-weight: 700;
+    }
+
+    .section-left{
+        .skill-list{
+            gap: 1.5rem;
+        }
+    }
+
+    .section-right{
+    }
+}

@@ -2,10 +2,21 @@
 
 .clb-main{
     position: relative;
-    max-height: 100vh;
+    min-height: 100vh;
     padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-bottom: 8rem;
     overflow: hidden;
+
+    .section-left{
+        .img-wrapper{
+            display: block;
+            height: 420px;
+            width: 350px;
+            background: var(--color-bg-gray);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+    }
 
     .section-right{
         .h1-wrapper{

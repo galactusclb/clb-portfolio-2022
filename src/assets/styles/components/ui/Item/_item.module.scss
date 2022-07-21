@@ -1,0 +1,29 @@
+
+.clb-item-with-inline-img{
+    column-gap: 2rem;
+
+    .item-img-wrapper{
+        display: block;
+        width: 90px;
+        height: 90px;
+        background: var(--color-bg-gray);
+        border-radius: 8px;
+    }
+
+    .item-title-wrapper{
+        h4{
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        h5{
+            font-size: 1.5rem;
+            color: var(--text-color-blue);
+
+            span{
+                color: initial;
+                font-weight: 600;
+            }
+        }
+    }
+}

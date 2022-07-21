@@ -56,9 +56,17 @@ $hero-black : #1B1C1E;
             transition: 0.5s;
             cursor: pointer;
 
+            
             &:hover{
                 background: $white;
-                color: $hero-black;
+                
+                span{
+                    color: $hero-black;
+                }
+            }
+            
+            span{
+                color: var(--text-color-white);
             }
         }
     }
