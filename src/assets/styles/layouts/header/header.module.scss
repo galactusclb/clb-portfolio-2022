@@ -1,5 +1,29 @@
 @import "assets/styles/abstracts/_variables.scss";
 
-.clb-nav-bar{
+header{
+    position: fixed;
+    display: block;
+    width: 100%;
+    // background: rgb(255, 255, 255);
+    z-index: 99;
     
+    .clb-nav-bar{
+        padding: 3rem 1rem;
+    
+        .div-name{
+            font-size: 1.8rem;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .clb-nav-links{
+            gap: 4rem;
+
+            .nav-link-item{
+                font-size: 1.8rem;
+                font-weight: 500;
+                cursor: pointer;
+            }
+        }
+    }
 }

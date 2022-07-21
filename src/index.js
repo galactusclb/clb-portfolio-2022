@@ -7,11 +7,13 @@ import Footer from 'layouts/footer/footer'
 import {
   BrowserRouter as Router,
 } from "react-router-dom";
+import Header from 'layouts/header/header.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
+      <Header />
       <App />
       <Footer />
     </Router>

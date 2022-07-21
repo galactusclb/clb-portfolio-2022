@@ -34,7 +34,7 @@ const SectionExperience = () => {
                         </div>
                     </div>
 
-                    <ul className='mt-4'>
+                    <ul className='clb-ul mt-4'>
                         <li><p>
                             Gained knowledge and implemented end-to-end testing for web applications.
                         </p></li>
