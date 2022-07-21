@@ -10,26 +10,26 @@ import ProjectsList from 'components/pages/home/ProjectsList'
 
 const Home = () => {
 
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(false)
 
-    useEffect(() => {
-        loading
-            ? document.querySelector("body").classList.add("loading")
-            : document.querySelector("body").classList.remove("loading")
-    })
+    // useEffect(() => {
+    //     loading
+    //         ? document.querySelector("body").classList.add("loading")
+    //         : document.querySelector("body").classList.remove("loading")
+    // })
 
     return (
-        <AnimateSharedLayout type="crossfade">
-            <AnimatePresence>
-                {
-                    loading ? (
-                        <motion.div key='loader'>
-                            <Loader setLoading={setLoading} />
-                        </motion.div>
-                    ) : (
-                        <>
-                            <Hero loading={loading} />
-                            {/* // <div className='' style={{ position: "relative" }}>
+        // <AnimateSharedLayout type="crossfade">
+        //     <AnimatePresence>
+        //         {
+        //             loading ? (
+        //                 <motion.div key='loader'>
+        //                     <Loader setLoading={setLoading} />
+        //                 </motion.div>
+        //             ) : (
+        <>
+            <Hero loading={loading} />
+            {/* // <div className='' style={{ position: "relative" }}>
                         //     {
                         //         !loading && (
                         //             <div className={`${style['clb-hero-img']}`}>
@@ -46,15 +46,15 @@ const Home = () => {
                         //     }
                         // </div> */}
 
-                            <HomeIntro />
-                            <WhatIDo />
-                            <ProjectsList />
-                        </>
+            <HomeIntro />
+            <WhatIDo />
+            <ProjectsList />
+        </>
 
-                    )
-                }
-            </AnimatePresence>
-        </AnimateSharedLayout>
+        //             )
+        //         }
+        //     </AnimatePresence>
+        // </AnimateSharedLayout>
     )
 }
 
