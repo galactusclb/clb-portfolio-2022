@@ -37,7 +37,7 @@ const GuestLayout = () => {
                             <Header />
                             <Routes>
                                 {getRoutes(routes)}
-                                <Route from="/" to="/home" />
+                                <Route from="/" to="/" />
                                 <Route from="*" to="/auth/login" />
                             </Routes>
                             <Footer />
