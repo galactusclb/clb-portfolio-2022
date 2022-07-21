@@ -5,7 +5,7 @@ import style from 'assets/styles/layouts/footer/footer.module.scss'
 import MagneticDOM from 'components/common/button/MagneticDOM'
 import useHover from 'utils/useHover';
 
-const Index = () => {
+const Footer = () => {
     const [hoverRef2, isHovered2] = useHover();
 
     return (
@@ -80,4 +80,4 @@ const Index = () => {
     )
 }
 
-export default Index
+export default Footer

@@ -12,11 +12,11 @@ import Header from 'layouts/header/header.jsx';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router>
-      <Header />
-      <App />
-      <Footer />
-    </Router>
+    {/* <Router> */}
+
+    <App />
+
+    {/* </Router> */}
   </React.StrictMode>
 );
 

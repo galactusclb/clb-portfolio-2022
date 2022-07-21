@@ -11,7 +11,7 @@ import useHover from 'utils/useHover';
 
 const Hero = ({ loading }) => {
 
-    let navigate = useNavigate();
+    // let navigate = useNavigate();
     const [playMarquee, setPlayMarquee] = useState(false);
 
     const [hoverRef, isHovered] = useHover();
@@ -96,8 +96,8 @@ const Hero = ({ loading }) => {
 
                         {/* Magnetic button */}
                         <MagneticDOM ref={hoverRef} onClick={() => {
-                            navigate("../about", { replace: true })
-                            console.log("ff");
+                            // navigate("../about", { replace: true })
+                            // console.log("ff");
                         }}>
                             <motion.div className={`${style['abuot-me']} row justify-content-center align-items-center mt-5 clb-magnetic-btn`}
                                 initial={{ scale: 0 }}
