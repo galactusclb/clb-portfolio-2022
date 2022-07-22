@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react'
 import style from 'assets/styles/layouts/page-loarder/page-loader.module.scss'
 import { Transition } from 'libs/providers/TransitionContext';
 
-const PageLoader = () => {
+const PageLoader = ({ EndBackgroundColor = null }) => {
 
     const { setPageLoading } = useContext(Transition);
 
@@ -15,7 +15,7 @@ const PageLoader = () => {
 
     return (
         <>
-            <div className={`${style['gg']}`}></div>
+            <div className={`${style['end-background']} ${EndBackgroundColor == 'white' && style['white']}`}></div>
             <div className={`${style['loader-wrapper']}`}>
                 <div className={`${style['text-wrapper']}`}>
                     <div className={`${style['text']} ${style['text-1']}`}>less is more</div>

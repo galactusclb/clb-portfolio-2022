@@ -42,7 +42,7 @@ const GuestLayout = () => {
                     isPageLoading ? (
                         <motion.div key='loader'>
                             {/* <PageLoader setLoading={setLoading} /> */}
-                            <PageLoader />
+                            <PageLoader EndBackgroundColor={location?.pathname == '/about' && 'white'} />
                         </motion.div>
                     ) : (
                         <>
