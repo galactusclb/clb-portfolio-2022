@@ -36,7 +36,7 @@ const GuestLayout = () => {
 
     return (
         <AnimateSharedLayout type="crossfade">
-            <AnimatePresence>
+            <AnimatePresence exitBeforeEnter>
 
                 {
                     isPageLoading ? (
@@ -47,7 +47,7 @@ const GuestLayout = () => {
                     ) : (
                         <>
                             <Header />
-                            <Routes>
+                            <Routes location={location} key={location.pathname}>
                                 {getRoutes(routes)}
                                 <Route from="/" to="/" />
                                 <Route from="*" to="/auth/login" />

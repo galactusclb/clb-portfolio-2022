@@ -28,27 +28,48 @@ const Home = () => {
         //                 </motion.div>
         //             ) : (
         <>
-            <Hero loading={loading} />
-            {/* // <div className='' style={{ position: "relative" }}>
-                        //     {
-                        //         !loading && (
-                        //             <div className={`${style['clb-hero-img']}`}>
-                        //                 <motion.img
-                        //                     src={`${process.env.PUBLIC_URL}/images/propic-800-min.png`} alt=""
-                        //                     layoutId='main-image-1'
-                        //                     transition={{
-                        //                         ease: [.6, 0.01, -0.05, 0.95],
-                        //                         duration: 1.6
-                        //                     }}
-                        //                 />
-                        //             </div>
-                        //         )
-                        //     }
-                        // </div> */}
+            <AnimatePresence>
+                <motion.div initial={{
+                    opacity: 1,
+                    // ease: [.6, .01, -.05, .95],
+                    duration: 1
 
-            <HomeIntro />
-            <WhatIDo />
-            <ProjectsList />
+                }}
+                    animate={{
+                        opacity: 1,
+
+                    }}
+                    exit={{
+                        opacity: 0,
+                        transition: {
+                            // ease: [.6, .01, -.05, .95],
+                            duration: 4
+                        }
+                    }}>
+                    <Hero loading={loading} />
+                    {/* // <div className='' style={{ position: "relative" }}>
+                            //     {
+                            //         !loading && (
+                            //             <div className={`${style['clb-hero-img']}`}>
+                            //                 <motion.img
+                            //                     src={`${process.env.PUBLIC_URL}/images/propic-800-min.png`} alt=""
+                            //                     layoutId='main-image-1'
+                            //                     transition={{
+                            //                         ease: [.6, 0.01, -0.05, 0.95],
+                            //                         duration: 1.6
+                            //                     }}
+                            //                 />
+                            //             </div>
+                            //         )
+                            //     }
+                            // </div> */}
+
+                    <HomeIntro />
+                    <WhatIDo />
+                    <ProjectsList />
+
+                </motion.div>
+            </AnimatePresence>
         </>
 
         //             )
