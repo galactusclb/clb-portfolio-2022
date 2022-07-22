@@ -1,14 +1,19 @@
 import { motion, AnimatePresence, AnimateSharedLayout } from 'framer-motion';
-import React, { useEffect, useState } from 'react'
-import { Route, Routes } from 'react-router-dom';
+import React, { useContext, useEffect } from 'react'
+import { Route, Routes, useLocation } from 'react-router-dom';
+
 import Footer from './footer/footer';
 import Header from './header/header';
 import PageLoader from './page-loarder/PageLoader';
+import { Transition } from 'libs/providers/TransitionContext';
 
 import routes from './RoutesMap';
 
 const GuestLayout = () => {
-    const [loading, setLoading] = useState(true)
+    // const [loading, setLoading] = useState(true)
+    const { isPageLoading, setPageLoading } = useContext(Transition);
+
+    const location = useLocation()
 
     const getRoutes = (routes) => {
         return routes.map((prop, key) => {
@@ -19,18 +24,25 @@ const GuestLayout = () => {
     };
 
     useEffect(() => {
-        loading
+        isPageLoading
             ? document.querySelector("body").classList.add("loading")
             : document.querySelector("body").classList.remove("loading")
     })
 
+    useEffect(() => {
+        // console.log('location state : ', location?.pathname);
+        setPageLoading(true)
+    }, [location?.pathname])
+
     return (
         <AnimateSharedLayout type="crossfade">
             <AnimatePresence>
+
                 {
-                    loading ? (
+                    isPageLoading ? (
                         <motion.div key='loader'>
-                            <PageLoader setLoading={setLoading} />
+                            {/* <PageLoader setLoading={setLoading} /> */}
+                            <PageLoader />
                         </motion.div>
                     ) : (
                         <>
@@ -44,6 +56,7 @@ const GuestLayout = () => {
                         </>
                     )
                 }
+
             </AnimatePresence>
         </AnimateSharedLayout>
     )

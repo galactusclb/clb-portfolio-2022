@@ -1,11 +1,14 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import style from 'assets/styles/layouts/page-loarder/page-loader.module.scss'
+import { Transition } from 'libs/providers/TransitionContext';
 
-const PageLoader = ({ setLoading }) => {
+const PageLoader = () => {
+
+    const { setPageLoading } = useContext(Transition);
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            setLoading(false);
+            setPageLoading(false);
         }, 4500);
         return () => clearTimeout(timer);
     });
