@@ -32,6 +32,8 @@ const Hero = ({ loading }) => {
                         <motion.img
                             src={`${process.env.PUBLIC_URL}/images/propic-800-min.png`} alt=""
                             layoutId='main-image-1'
+                            initial={{ opacity: 0, x: -100 }}
+                            animate={{ opacity: 1, x: 0 }}
                             transition={{
                                 ease: [.6, 0.01, -0.05, 0.95],
                                 duration: 1.6

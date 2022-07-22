@@ -4,25 +4,25 @@ import style from 'assets/styles/layouts/header/header.module.scss'
 import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
-    // let navigate = useNavigate();
+    let navigate = useNavigate();
 
     return (
         <header className=''>
             <div className={`${style['clb-nav-bar']} container d-flex align-items-center justify-content-between`}>
                 <div className={`${style['div-name']}`} onClick={() => {
-                    // navigate("../", { replace: true })
+                    navigate("/")
                 }}>
                     <span>©</span> CLB
                 </div>
 
                 <div className={`${style['clb-nav-links']} d-flex`}>
                     <div className={`${style['nav-link-item']}`} onClick={() => {
-                        // navigate("../", { replace: true })
+                        navigate("/")
                     }}>
                         Home
                     </div >
                     <div className={`${style['nav-link-item']}`} onClick={() => {
-                        // navigate("../about", { replace: true })
+                        navigate('/about')
                     }}>
                         About
                     </div >

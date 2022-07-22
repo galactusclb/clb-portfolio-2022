@@ -3,7 +3,7 @@ import Home from "pages/Home";
 
 var RoutesMap = [
     {
-        path: '/home',
+        path: '/',
         component: <Home />,
         layout: 'guest',
     },
