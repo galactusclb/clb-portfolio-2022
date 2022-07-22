@@ -6,6 +6,7 @@ import './assets/styles/main.scss';
 import Home from './pages/Home';
 import About from "pages/About";
 import GuestLayout from "layouts/GuestLayout";
+import { TransitionProvider } from "libs/providers/TransitionContext";
 
 function App() {
   // let routes = useRoutes([
@@ -15,9 +16,11 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
-        <GuestLayout />
-      </BrowserRouter>
+      <TransitionProvider>
+        <BrowserRouter>
+          <GuestLayout />
+        </BrowserRouter>
+      </TransitionProvider>
     </>
   );
 }
