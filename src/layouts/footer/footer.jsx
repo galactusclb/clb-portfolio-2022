@@ -5,9 +5,12 @@ import style from 'assets/styles/layouts/footer/footer.module.scss'
 import MagneticDOM from 'components/common/button/MagneticDOM'
 import useHover from 'utils/useHover';
 import MagneticDOM2 from 'components/common/button/MagneticDOM_2';
+import { useRef } from 'react';
+import MagneticDOM3 from 'components/common/button/MagneticDOM3';
 
 const Footer = () => {
     const [hoverRef2, isHovered2] = useHover();
+    const ref = useRef()
 
     return (
         <footer >
@@ -66,14 +69,22 @@ const Footer = () => {
                 </form>
 
                 <div className={`${style['footer-bottom']} d-flex justify-content-end`}>
-                    <MagneticDOM2 ref={hoverRef2} >
+                    {/* <MagneticDOM2 ref={ref} >
                         <button type='button' className={`clb-btn-circle row justify-content-center align-items-center mt-0`} onClick={() => console.log('clicked 2')}>
                             <span
                                 className='text-center'>
                                 Send it.
                             </span>
                         </button>
-                    </MagneticDOM2>
+                    </MagneticDOM2> */}
+                    <MagneticDOM3 ref={ref} >
+                        <button type='button' className={`clb-btn-circle row justify-content-center align-items-center mt-0`} onClick={() => console.log('clicked 2')}>
+                            <span
+                                className='text-center'>
+                                Send it.
+                            </span>
+                        </button>
+                    </MagneticDOM3>
 
                 </div>
             </div>
