@@ -12,7 +12,7 @@ const Header = () => {
                 <div className={`${style['div-name']}`} onClick={() => {
                     navigate("/")
                 }}>
-                    <span>©</span> CLB
+                    <span>©</span>CLB
                 </div>
 
                 <div className={`${style['clb-nav-links']} d-flex`}>
