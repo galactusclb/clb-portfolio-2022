@@ -5,11 +5,23 @@
     border-color: var(--bg-color-black);
     background: var(--bg-color-black);
     font-size: 1.8rem;
-    
+    transition: 0.5s;
+    cursor: pointer;
+
     span{
         color: var(--text-color-white);
         word-wrap: break-word;
+        transition: 0.5s;
     }
+    
+    &:hover{
+        background: var(--bg-color-white);
+        
+        span{
+            color: var(--text-color-black);
+        }
+    }
+    
 }
 
 .clb-btn-rounded {
