@@ -9,8 +9,7 @@ import { useRef } from 'react';
 import MagneticDOM3 from 'components/common/button/MagneticDOM3';
 
 const Footer = () => {
-    const [hoverRef2, isHovered2] = useHover();
-    const ref = useRef()
+    const [hoverRef, isHovered] = useHover();
 
     return (
         <footer >
@@ -77,7 +76,7 @@ const Footer = () => {
                             </span>
                         </button>
                     </MagneticDOM2> */}
-                    <MagneticDOM3 ref={ref} >
+                    <MagneticDOM3 ref={hoverRef} >
                         <button type='button' className={`clb-btn-circle row justify-content-center align-items-center mt-0`} onClick={() => console.log('clicked 2')}>
                             <span
                                 className='text-center'>

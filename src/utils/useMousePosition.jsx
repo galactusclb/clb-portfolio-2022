@@ -8,7 +8,7 @@ const useMousePosition = () => {
     });
 
     const updateMousePosition = (ev) => {
-        setMousePosition({ mouseX: ev.clientX, mouseY: ev.clientY, scrolledMouseY: ev.pageY });
+        setMousePosition({ mouseX: ev.clientX, mouseY: ev.clientY, scrolledMouseX: ev.pageX, scrolledMouseY: ev.pageY });
     };
 
     useEffect(() => {
