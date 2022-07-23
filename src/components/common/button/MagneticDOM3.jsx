@@ -39,10 +39,10 @@ const MagneticDOM3 = forwardRef((props, ref) => {
             if (distanceMouseButton < distanceToTrigger) {
                 console.log(distanceMouseButton);
                 // Translate button position on hover
-                x = (mouseX + window.scrollX - (rect.left + rect.width / 2)) * 0.2;
-                y = (mouseY + window.scrollY - (rect.top + rect.height / 2)) * 0.2;
+                x = (mouseX + (window.scrollX - (rect.left + rect.width / 2))) * 0.2;
+                y = (mouseY + (window.scrollY - (rect.top + rect.height / 2))) * 0.2;
                 node.style.transform = `translate(${x / 4}px, ${y / 4}px)`;
-                ref.current.style.transform = `translate(${x / 4}px, ${y / 4}px)`;
+                // ref.current.style.transform = `translate(${x / 4}px, ${y / 4}px)`;
                 ref.current.style.transition = `0.15s`;
             } else {
                 // Restore initial position
