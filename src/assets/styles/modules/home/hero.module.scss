@@ -108,19 +108,25 @@ $hero-black : #1B1C1E;
 }
 
 .row-title,.row-letter{
-    font-size: 26rem;
-    font-weight: 500;
+    font-family: "Monument Extended";
+    font-size: 20rem;
+    font-weight: 700;
     position: relative;
-    letter-spacing: -0.8rem;
+    letter-spacing: 1rem;
     display: inline-block;
     white-space: nowrap;
-    line-height: 1.25;
+    line-height: 1.7;
+
+    // font-size: 26rem;
+    // font-weight: 500;
+    // letter-spacing: -0.8rem;
+    // line-height: 1.25;
 
     // transparent outline text
     color: #ffffff00 !important;
-    -webkit-text-stroke : 3px $background !important;
+    -webkit-text-stroke : 8px $background !important;
 }
 
 .row-title{
-    padding: 0 8vw;
+    padding: 0 5vw;
 }
