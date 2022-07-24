@@ -27,7 +27,7 @@ const Header = () => {
                         About
                     </div >
                     <div className={`${style['nav-link-item']}`} onClick={() => {
-                        // navigate("../contact", { replace: true })
+                        navigate("/contact", { replace: true })
                     }}>
                         Contact
                     </div >

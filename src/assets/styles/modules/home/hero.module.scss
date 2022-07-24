@@ -20,6 +20,7 @@ $hero-black : #1B1C1E;
         left: -5px;
         bottom: -30px;
         // transform: translate(-50%);
+        pointer-events: none;
 
         img{
             height: 100%;

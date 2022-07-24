@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import style from 'assets/styles/modules/home/hero.module.scss'
 import { banner, letterAnimation } from 'animations/home/animation_hero';
-import MagneticDOM from 'components/common/button/MagneticDOM';
 import useHover from 'utils/useHover';
-
+import MagneticDOM from 'components/common/button/MagneticDOM';
 
 
 const Hero = ({ loading }) => {
@@ -98,11 +96,8 @@ const Hero = ({ loading }) => {
                         </div>
 
                         {/* Magnetic button */}
-                        <MagneticDOM ref={hoverRef} onClick={() => {
-                            // navigate("../about", { replace: true })
-                            // console.log("ff");
-                        }}>
-                            <motion.div className={`${style['abuot-me']} row justify-content-center align-items-center mt-5 clb-magnetic-btn`}
+                        <MagneticDOM ref={hoverRef} >
+                            <motion.div className={`clb-btn-circle row justify-content-center align-items-center mt-5`}
                                 initial={{ scale: 0 }}
                                 animate={{ scale: 1 }}
                                 transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 1, delay: 2.2 }}>
@@ -119,6 +114,15 @@ const Hero = ({ loading }) => {
                                 </motion.span>
                             </motion.div>
                         </MagneticDOM>
+
+                        {/* <MagneticDOM3 ref={hoverRef} >
+                            <button type='button' className={`clb-btn-circle row justify-content-center align-items-center mt-0`} onClick={() => console.log('clicked 2')}>
+                                <span
+                                    className='text-center'>
+                                    Send it.
+                                </span>
+                            </button>
+                        </MagneticDOM3> */}
                     </div>
                 </div>
 

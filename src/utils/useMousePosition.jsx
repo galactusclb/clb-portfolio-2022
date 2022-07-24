@@ -3,11 +3,13 @@ import { useState, useEffect } from 'react';
 const useMousePosition = () => {
     const [mousePosition, setMousePosition] = useState({
         mouseX: null,
-        mouseY: null
+        mouseY: null,
+        scrolledMouseX: null,
+        scrolledMouseY: null
     });
 
     const updateMousePosition = (ev) => {
-        setMousePosition({ mouseX: ev.clientX, mouseY: ev.clientY });
+        setMousePosition({ mouseX: ev.clientX, mouseY: ev.clientY, scrolledMouseX: ev.pageX, scrolledMouseY: ev.pageY });
     };
 
     useEffect(() => {
