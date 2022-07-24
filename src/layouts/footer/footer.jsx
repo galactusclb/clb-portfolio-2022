@@ -2,11 +2,10 @@ import React from 'react'
 import { motion } from "framer-motion";
 
 import style from 'assets/styles/layouts/footer/footer.module.scss'
-import MagneticDOM from 'components/common/button/MagneticDOM'
 import useHover from 'utils/useHover';
 import MagneticDOM2 from 'components/common/button/MagneticDOM_2';
 import { useRef } from 'react';
-import MagneticDOM3 from 'components/common/button/MagneticDOM3';
+import MagneticDOM from 'components/common/button/MagneticDOM';
 
 const Footer = () => {
     const [hoverRef, isHovered] = useHover();
@@ -76,14 +75,14 @@ const Footer = () => {
                             </span>
                         </button>
                     </MagneticDOM2> */}
-                    <MagneticDOM3 ref={hoverRef} >
+                    <MagneticDOM ref={hoverRef} >
                         <button type='button' className={`clb-btn-circle row justify-content-center align-items-center mt-0`} onClick={() => console.log('clicked 2')}>
                             <span
                                 className='text-center'>
                                 Send it.
                             </span>
                         </button>
-                    </MagneticDOM3>
+                    </MagneticDOM>
 
                 </div>
             </div>

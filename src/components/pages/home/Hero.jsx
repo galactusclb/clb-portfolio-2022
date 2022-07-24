@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import style from 'assets/styles/modules/home/hero.module.scss'
 import { banner, letterAnimation } from 'animations/home/animation_hero';
-import MagneticDOM from 'components/common/button/MagneticDOM';
 import useHover from 'utils/useHover';
-import MagneticDOM3 from 'components/common/button/MagneticDOM3';
-
+import MagneticDOM from 'components/common/button/MagneticDOM';
 
 
 const Hero = ({ loading }) => {
@@ -99,7 +96,7 @@ const Hero = ({ loading }) => {
                         </div>
 
                         {/* Magnetic button */}
-                        <MagneticDOM3 ref={hoverRef} >
+                        <MagneticDOM ref={hoverRef} >
                             <motion.div className={`clb-btn-circle row justify-content-center align-items-center mt-5`}
                                 initial={{ scale: 0 }}
                                 animate={{ scale: 1 }}
@@ -116,7 +113,7 @@ const Hero = ({ loading }) => {
                                     About me
                                 </motion.span>
                             </motion.div>
-                        </MagneticDOM3>
+                        </MagneticDOM>
 
                         {/* <MagneticDOM3 ref={hoverRef} >
                             <button type='button' className={`clb-btn-circle row justify-content-center align-items-center mt-0`} onClick={() => console.log('clicked 2')}>

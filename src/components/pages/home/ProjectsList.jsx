@@ -2,7 +2,6 @@ import React from 'react'
 import { motion } from 'framer-motion';
 
 import style from 'assets/styles/modules/home/project-list.module.scss'
-import MagneticDOM from 'components/common/button/MagneticDOM'
 import useHover from 'utils/useHover';
 
 const ProjectsList = () => {

@@ -1,22 +1,10 @@
 import React from 'react'
 
 import style from 'assets/styles/modules/home/home-intro.module.scss'
-import MagneticDOM3 from 'components/common/button/MagneticDOM3'
-import useHover from 'utils/useHover';
 
 const HomeIntro = () => {
-    const [hoverRef, isHovered] = useHover();
-
     return (
         <section className={`container ${style['clb-section']}`}>
-            <MagneticDOM3 ref={hoverRef} >
-                <button type='button' className={`clb-btn-circle row justify-content-center align-items-center mt-0`} onClick={() => console.log('clicked 2')}>
-                    <span
-                        className='text-center'>
-                        Send it.
-                    </span>
-                </button>
-            </MagneticDOM3>
             <h3>Hello there, 🤟</h3>
             <div className="row mt-5">
                 <div className="col-lg-7">
