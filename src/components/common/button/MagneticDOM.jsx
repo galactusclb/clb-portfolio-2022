@@ -5,6 +5,9 @@ import useMousePosition from 'utils/useMousePosition';
 import { distance } from 'utils/utils';
 
 const MagneticDOM = forwardRef((props, ref) => {
+    let LERP_AMOUNT = props?.lerp ?? 0.8;
+
+
     const { mouseX, mouseY, scrolledMouseX, scrolledMouseY } = useMousePosition();
     const textRef = useRef();
     const fillControls = useAnimation();
@@ -31,17 +34,17 @@ const MagneticDOM = forwardRef((props, ref) => {
             // Handle magnetic effect
             if (distanceMouseButton < distanceToTrigger) {
                 // Translate button position on hover
-                x = (mouseX - (node?.offsetLeft + (node.clientWidth / 2))) * 0.2;
-                y = (scrolledMouseY - (node.offsetTop + (node.clientHeight / 2))) * 0.2;
+                x = (mouseX - (node?.offsetLeft + (node.clientWidth / 2))) * LERP_AMOUNT;
+                y = (scrolledMouseY - (node.offsetTop + (node.clientHeight / 2))) * LERP_AMOUNT;
 
                 node.style.transform = `translate(${x / 4}px, ${y / 4}px)`;
                 ref.current.style.transform = `translate(${x / 4}px, ${y / 4}px)`;
-                ref.current.style.transition = `0.15s`;
+                ref.current.style.transition = `0.3s`;
             } else {
                 // Restore initial position
                 node.style.transform = `translate(0, 0)`;
                 ref.current.style.transform = `translate(0, 0)`;
-                ref.current.style.transition = `0.15s`;
+                ref.current.style.transition = `0.4s`;
             }
         }
 

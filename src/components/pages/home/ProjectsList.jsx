@@ -61,7 +61,7 @@ const ProjectsList = () => {
                                         <p>We did a complete redesign of Oxstreet online shop mobile experience: products exposure, catalogue, checkout and payment process.</p>
                                     </div>
                                     <div className={`${style['project-info-right']}`}>
-                                        <button className="clb-btn-circle" style={{ width: 120, height: 120 }} onMouseMove={handleWheel}>
+                                        <button className="clb-btn-circle outline" style={{ width: 100, height: 100 }}>
                                             View
                                         </button>
                                     </div>
@@ -91,7 +91,7 @@ const ProjectsList = () => {
                                         <p>We did a complete redesign of Oxstreet online shop mobile experience: products exposure, catalogue, checkout and payment process.</p>
                                     </div>
                                     <div className={`${style['project-info-right']}`}>
-                                        <button className="clb-btn-circle" style={{ width: 120, height: 120 }}>
+                                        <button className="clb-btn-circle outline" style={{ width: 100, height: 100 }}>
                                             View
                                         </button>
                                     </div>
@@ -121,7 +121,7 @@ const ProjectsList = () => {
                                         <p>We did a complete redesign of Oxstreet online shop mobile experience: products exposure, catalogue, checkout and payment process.</p>
                                     </div>
                                     <div className={`${style['project-info-right']}`}>
-                                        <button className="clb-btn-circle" style={{ width: 120, height: 120 }}>
+                                        <button className="clb-btn-circle outline" style={{ width: 100, height: 100 }}>
                                             View
                                         </button>
                                     </div>
@@ -151,7 +151,7 @@ const ProjectsList = () => {
                                         <p>We did a complete redesign of Oxstreet online shop mobile experience: products exposure, catalogue, checkout and payment process.</p>
                                     </div>
                                     <div className={`${style['project-info-right']}`}>
-                                        <button className="clb-btn-circle" style={{ width: 120, height: 120 }}>
+                                        <button className="clb-btn-circle outline" style={{ width: 100, height: 100 }}>
                                             View
                                         </button>
                                     </div>
