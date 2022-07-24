@@ -5,7 +5,7 @@ import useMousePosition from 'utils/useMousePosition';
 import { distance } from 'utils/utils';
 
 const MagneticDOM = forwardRef((props, ref) => {
-    let LERP_AMOUNT = props?.lerp ?? 0.8;
+    let LERP_AMOUNT = props?.lerp ?? 0.5;
 
 
     const { mouseX, mouseY, scrolledMouseX, scrolledMouseY } = useMousePosition();
@@ -52,9 +52,9 @@ const MagneticDOM = forwardRef((props, ref) => {
 
     return (
         <div ref={ref} style={{ display: "inline-block" }} onClick={props?.onClick}>
-            <span ref={textRef}>
-                {props.children}
-            </span>
+            {/* <span ref={textRef}> */}
+            {props.children}
+            {/* </span> */}
         </div>
     )
 })

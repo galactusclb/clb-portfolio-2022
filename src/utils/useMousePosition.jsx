@@ -4,6 +4,7 @@ const useMousePosition = () => {
     const [mousePosition, setMousePosition] = useState({
         mouseX: null,
         mouseY: null,
+        scrolledMouseX: null,
         scrolledMouseY: null
     });
 
