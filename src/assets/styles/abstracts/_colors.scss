@@ -1,10 +1,13 @@
 @import "./_variables.scss";
 
 :root{
+    --color-primary : #{$primary-color};
     --color-bg-gray : #{$bg-color-gray};
     --text-color-white : #{$white};
     --text-color-black : #{$text-color-black};
     --text-color-blue : #{$text-color-blue};
+
+    --bg-color-placeholder : #{$bg-color-gray};
 
     --bg-color-black : #{$black};
     --bg-color-white : #{$white};

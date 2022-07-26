@@ -1,0 +1,20 @@
+@import "assets/styles/abstracts/_variables.scss";
+
+.clb-main{
+    padding-top: clamp(4em, 10vh, 12em);
+    padding-bottom: clamp(4em, 10vh, 12em);
+
+    .section-details{
+        margin-top: clamp(4em, 10vh, 8em);
+
+        h3{
+            font-weight: 600;
+            font-size: 3rem;
+        }
+
+        p{
+            max-width: 60%;
+            margin-top: 4rem;
+        }
+    }
+}
