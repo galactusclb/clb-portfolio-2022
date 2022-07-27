@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import About from "pages/About";
 import GuestLayout from "layouts/GuestLayout";
 import { TransitionProvider } from "libs/providers/TransitionContext";
+import ScrollToTop from "helpers/ScrollToTop";
 
 function App() {
   // let routes = useRoutes([
@@ -18,6 +19,7 @@ function App() {
     <>
       <TransitionProvider>
         <BrowserRouter>
+          <ScrollToTop />
           <GuestLayout />
         </BrowserRouter>
       </TransitionProvider>
