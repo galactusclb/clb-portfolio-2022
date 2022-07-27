@@ -14,8 +14,8 @@ const ProjectScreenshot = () => {
                 </div>
             </div>
 
-            <div className={`${style['section-details']}`}>
-                <img src={`${process.env.PUBLIC_URL}/images/project-images/micdrop-case-header.jpg`} alt="" className='img-fluid' />
+            <div className={`${style['section-container-fluid-bg']}`}>
+                <img src={`${process.env.PUBLIC_URL}/images/project-images/tastymock-screenshot-collection-Dark.png`} alt="" className='img-fluid' />
             </div>
 
 

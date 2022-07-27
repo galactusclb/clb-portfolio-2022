@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import React from 'react'
 import useHover from 'utils/useHover';
 import SectionBigTitle from 'components/pages/project/section-big-title';
+import ProjectMobile from 'components/pages/project/section-project-mobile';
 
 const Project = () => {
     const [hoverRef, isHovered] = useHover();
@@ -34,7 +35,8 @@ const Project = () => {
                     <SectionBigTitle />
                     <ProjectSection_1 />
                     <ProjectScreenshot />
-                    <ProjectSection_2 />
+                    {/* <ProjectSection_2 /> */}
+                    <ProjectMobile />
                 </motion.div>
             </AnimatePresence>
         </>
