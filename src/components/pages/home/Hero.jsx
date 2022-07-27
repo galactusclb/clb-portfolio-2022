@@ -5,6 +5,7 @@ import style from 'assets/styles/modules/home/hero.module.scss'
 import { banner, letterAnimation } from 'animations/home/animation_hero';
 import useHover from 'utils/useHover';
 import MagneticDOM from 'components/common/button/MagneticDOM';
+import { useNavigate } from 'react-router-dom';
 
 
 const Hero = ({ loading }) => {
@@ -13,6 +14,8 @@ const Hero = ({ loading }) => {
     const [playMarquee, setPlayMarquee] = useState(false);
 
     const [hoverRef, isHovered] = useHover();
+
+    let navigate = useNavigate();
 
     useEffect(() => {
         setTimeout(() => {
@@ -100,7 +103,10 @@ const Hero = ({ loading }) => {
                             <motion.div className={`clb-btn-circle row justify-content-center align-items-center mt-5`}
                                 initial={{ scale: 0 }}
                                 animate={{ scale: 1 }}
-                                transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 1, delay: 2.2 }}>
+                                transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 1, delay: 2.2 }}
+                                onClick={() => {
+                                    navigate('/about')
+                                }}>
                                 <motion.span
                                     className='text-center'
                                     initial={{ opacity: 0 }}

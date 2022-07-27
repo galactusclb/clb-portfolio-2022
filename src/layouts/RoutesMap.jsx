@@ -1,6 +1,7 @@
 import About from "pages/About";
 import Contact from "pages/Contact";
 import Home from "pages/Home";
+import Project from "pages/Project";
 
 var RoutesMap = [
     {
@@ -17,7 +18,12 @@ var RoutesMap = [
         path: '/contact',
         component: <Contact />,
         layout: 'guest',
-    }
+    },
+    {
+        path: '/project',
+        component: <Project />,
+        layout: 'guest',
+    },
 ]
 
 export default RoutesMap;

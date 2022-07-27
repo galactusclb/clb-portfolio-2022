@@ -1,0 +1,16 @@
+::-webkit-scrollbar{
+	background-color: var(--bg-color-placeholder);
+}
+
+::-webkit-scrollbar:horizontal {
+	width: 10px;
+}
+
+::-webkit-scrollbar:vertical {
+	width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--bg-color-black);
+	border-radius: 6px;
+}
