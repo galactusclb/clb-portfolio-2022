@@ -25,9 +25,9 @@ const SectionSkill = () => {
 
                     <div className={`${style['skill-list']} d-flex flex-wrap mt-5`}>
                         {
-                            skills?.map((skill) => {
+                            skills?.map((skill, key) => {
                                 return (
-                                    <div className="clb-btn-rounded">
+                                    <div className="clb-btn-rounded" key={key}>
                                         {skill}
                                     </div>
                                 )

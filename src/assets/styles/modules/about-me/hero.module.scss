@@ -24,6 +24,12 @@
                 font-size: 18rem;
                 line-height: 85%;
                 font-weight: 700;
+                overflow: hidden;
+                
+                span{
+                    // transform: translateY(100%);
+                    display: inline-block;
+                }
             }
         }
 
