@@ -31,7 +31,7 @@ const GuestLayout = () => {
 
     useEffect(() => {
         // console.log('location state : ', location?.pathname);
-        setPageLoading(true)
+        // setPageLoading(true)
     }, [location?.pathname])
 
     return (

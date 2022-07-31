@@ -24,16 +24,51 @@ const SectionEducation = () => {
                     <div className="clb-item-with-inline-img d-flex flex-row flex-nowrap mt-5">
                         <div className="item-img-wrapper"></div>
                         <div className="item-title-wrapper">
-                            <h4>BSc. (Hons) Computer Science and Software Engineering</h4>
-                            <h5>University of Bedfordshire, UK <span>( 2020-2021 )</span></h5>
+                            <h4 className='split-reveal-overflow '>
+                                <motion.span
+                                    variants={text_split_reveal}
+                                    initial="initial"
+                                    whileInView="animate"
+                                    custom={0.13}
+                                    viewport={{ once: true }}>
+                                    BSc. (Hons) Computer Science and Software Engineering
+                                </motion.span>
+                            </h4>
+                            <h5 className='split-reveal-overflow split-h5'>
+                                <motion.span
+                                    variants={text_split_reveal}
+                                    initial="initial"
+                                    whileInView="animate"
+                                    custom={0.3}
+                                    viewport={{ once: true }}>
+                                    University of Bedfordshire, UK <span className='split-h5-other-text'>( 2020-2021 )</span>
+                                </motion.span>
+                            </h5>
                         </div>
                     </div>
 
                     <div className="clb-item-with-inline-img d-flex flex-row flex-nowrap mt-5">
                         <div className="item-img-wrapper"></div>
                         <div className="item-title-wrapper">
-                            <h4>Higher National Diploma in Computer Science</h4>
-                            <h5>Sri Lanka Institute of Information Technology, Sri Lanka <span>( 2018-2020 )</span></h5>
+                            <h4 className='split-reveal-overflow '>
+                                <motion.span
+                                    variants={text_split_reveal}
+                                    initial="initial"
+                                    whileInView="animate"
+                                    custom={0.3}
+                                    viewport={{ once: true }}>Higher National Diploma in Computer Science
+                                </motion.span>
+                            </h4>
+                            <h5 className='split-reveal-overflow split-h5'>
+                                <motion.span
+                                    variants={text_split_reveal}
+                                    initial="initial"
+                                    whileInView="animate"
+                                    custom={0.42}
+                                    viewport={{ once: true }}>
+                                    Sri Lanka Institute of Information Technology, Sri Lanka <span className='split-h5-other-text'>( 2018-2020 )</span>
+                                </motion.span>
+                            </h5>
                         </div>
                     </div>
 
