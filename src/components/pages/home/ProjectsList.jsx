@@ -1,35 +1,70 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion';
 
 import style from 'assets/styles/modules/home/project-list.module.scss'
 import useHover from 'utils/useHover';
 import { useNavigate } from 'react-router-dom';
+import { text_split_reveal } from 'animations/common-animation';
 
 const ProjectsList = () => {
     let navigate = useNavigate();
 
+    const [categories, setcategories] = useState([
+        {
+            title: 'All',
+            active: true
+        },
+        {
+            title: 'Development',
+            active: false
+        },
+        {
+            title: 'UI design',
+            active: false
+        },
+        {
+            title: 'Illustration',
+            active: false
+        }
+    ])
+
     return (
         <section className={`container ${style['clb-section']} px-0`}>
             <div className={`${style['clb-big-tittle']} container`}>
-                <h2>
-                    Creating next level
-                    digital products
+                <h2 className='split-reveal-overflow'>
+                    <motion.span
+                        variants={text_split_reveal}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true }}
+                        custom={0}
+                    >
+                        Creating next level
+                    </motion.span>
+                </h2>
+                <h2 className='split-reveal-overflow'>
+                    <motion.span
+                        variants={text_split_reveal}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true }}
+                        custom={0.1}
+                    >
+                        digital products
+                    </motion.span>
                 </h2>
             </div>
             <div className={`${style['clb-project-list']} container`}>
                 <div className={`${style['clb-project-category']} d-flex`} style={{ gap: "1.5rem" }}>
-                    <button className={`${style['active']} btn`}>
-                        All
-                    </button>
-                    <button className={`btn`}>
-                        Development
-                    </button>
-                    <button className={`btn`}>
-                        UI design
-                    </button>
-                    <button className={`btn`}>
-                        Illustration
-                    </button>
+                    {
+                        categories && categories?.map((item, key) => {
+                            return (
+                                <button className={`${item?.active && style['active']} btn`}>
+                                    {item?.title}
+                                </button>
+                            )
+                        })
+                    }
                 </div>
 
                 <div className={`${style['clb-projects']}`} >
