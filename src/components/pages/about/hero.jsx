@@ -20,7 +20,7 @@ const AboutHero = () => {
                                 animate="animate"
                                 custom={1.6}
                             >
-                                <img src={`${process.env.PUBLIC_URL}/images/about-me.png`} alt="" srcset="" />
+                                <img src={`${process.env.PUBLIC_URL}/images/about-me.png`} alt="" srcSet="" />
                             </motion.div>
                         </div>
                     </div>
