@@ -16,13 +16,27 @@
             font-weight: 600;
         }
 
-        h5, h5 span.reveal{
+        h5{
             font-size: 1.5rem;
             color: var(--text-color-blue);
 
             span{
                 color: initial;
                 font-weight: 600;
+            }
+
+            &.split-h5{
+                & > span{
+                    font-size: 1.5rem;
+                    color: var(--text-color-blue);
+                    font-weight: 400; 
+                    
+                    span.split-h5-other-text{
+                        color: initial;
+                        font-weight: 600;
+                    }
+                }
+
             }
         }
     }

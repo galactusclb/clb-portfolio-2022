@@ -52,7 +52,7 @@ const SectionExperience = () => {
                                     Software Engineer
                                 </motion.span>
                             </h4>
-                            <h5 className='split-reveal-overflow'>
+                            <h5 className='split-reveal-overflow  split-h5'>
                                 <motion.span
                                     variants={text_split_reveal}
                                     initial="initial"
