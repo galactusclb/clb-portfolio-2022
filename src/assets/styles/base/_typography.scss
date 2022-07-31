@@ -28,3 +28,12 @@ p{
 // a {
 //   font-weight: 600;
 // }
+
+.split-reveal-overflow{
+  overflow: hidden;
+                
+  span{
+      // transform: translateY(100%);
+      display: inline-block;
+  }
+}
