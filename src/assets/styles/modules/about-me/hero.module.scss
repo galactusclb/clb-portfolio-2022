@@ -9,12 +9,22 @@
 
     .section-left{
         .img-wrapper{
-            display: block;
-            height: 420px;
-            width: 350px;
-            background: var(--bg-color-placeholder);
-            border-radius: 8px;
             overflow: hidden;
+
+            div{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 420px;
+                width: 350px;
+                background: var(--bg-color-placeholder);
+                border-radius: 8px;
+                overflow: hidden;
+
+                img{
+                    width: 100%;
+                }
+            }
         }
     }
 
@@ -40,7 +50,7 @@
                 max-width: 500px;
                 font-size: 1.8rem;
 
-                &:nth-child(2){
+                &:nth-child(2) span{
                     color: #7C7C7C;
                 }
             }

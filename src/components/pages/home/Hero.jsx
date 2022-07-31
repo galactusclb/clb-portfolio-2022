@@ -20,7 +20,7 @@ const Hero = ({ loading }) => {
     useEffect(() => {
         setTimeout(() => {
             setPlayMarquee(true);
-        }, 1800)
+        }, 3200)
 
     }, []);
 

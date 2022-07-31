@@ -1,14 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useRef } from 'react';
 import { useEffect } from 'react';
 
 const SplitTextReveal = ({ children }) => {
+
+    const [lines, setLines] = useState([])
+
+    const textRef = useRef()
 
     let splitWords = function (selector) {
         console.log("gg");
         var elements = document.querySelectorAll(selector);
 
         elements.forEach(function (el) {
-            console.log(el);
             el.dataset.splitText = el.textContent;
             el.innerHTML = el.textContent
                 .split(/\s/)
@@ -50,36 +54,66 @@ const SplitTextReveal = ({ children }) => {
 
         splitWords(selector);
 
-        elements.forEach(function (el) {
-            var lines = getLines(el);
+        // elements.forEach(function (el) {
+        // var lines = getLines(el);
+        var textLines = getLines(elements?.[0]);
+        console.log(textLines);
+        // setLines(textLines);
 
-            var wrappedLines = "";
-            lines.forEach(function (wordsArr) {
-                wrappedLines += '<span class="line"><span class="words">';
-                wordsArr.forEach(function (word) {
-                    wrappedLines += word.outerHTML;
-                });
-                wrappedLines += "</span></span>";
+        var wrappedLines = "";
+        // console.log('lines count : ', textLines);
+
+        textLines.forEach(function (wordsArr) {
+            wrappedLines += '<motion.span class="line"><span class="words">';
+            wordsArr.forEach(function (word) {
+                wrappedLines += word.outerHTML;
             });
-            el.innerHTML = wrappedLines;
+            wrappedLines += "</span></motion.span>";
         });
+        // elements[0].dat = wrappedLines;
+        // return wrappedLines;
+        setLines(wrappedLines)
+        // // });
     };
 
 
 
     useEffect(() => {
-        splitLines(".reveal-text");
-        let revealText = document.querySelectorAll(".reveal-text");
-        let revealLines = revealText.forEach((element) => {
-            const lines = element.querySelectorAll(".words");
-            console.log(lines);
-        })
+        splitLines(".reveal-text")
+
+        console.log(lines)
+
+        if (textRef.current) {
+            // textRef.current.innerHTML = lines;
+        }
+        // let revealText = document.querySelectorAll(".line");
+        // console.log(revealText);
     }, [])
 
 
     return (
         <>
-            {children}
+            <span ref={textRef}>
+                {children}
+                {/* <span
+                    dangerouslySetInnerHTML={{ __html: lines }}
+                /> */}
+                {/* {
+                    lines?.map((item, key) => {
+                        <span class="line"><span class="words">
+                            {
+                                item.forEach(function (word) {
+                                    // <p>{word}</p>
+                                    // <span
+                                    //     dangerouslySetInnerHTML={{ __html: word }}
+                                    // />
+                                })
+                            }
+                        </span>
+                        </span>
+                    })
+                } */}
+            </span>
         </>
     )
 }
