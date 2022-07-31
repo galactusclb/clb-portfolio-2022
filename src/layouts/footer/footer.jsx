@@ -6,6 +6,7 @@ import useHover from 'utils/useHover';
 import MagneticDOM2 from 'components/common/button/MagneticDOM_2';
 import { useRef } from 'react';
 import MagneticDOM from 'components/common/button/MagneticDOM';
+import { text_split_reveal } from 'animations/common-animation';
 
 const Footer = () => {
     const [hoverRef, isHovered] = useHover();
@@ -32,16 +33,51 @@ const Footer = () => {
             </MagneticDOM> */}
 
             <div className={`${style['clb-big-tittle']} container`}>
-                <h2>
-                    Let’s work
-                    together 👋
+                <h2 className='split-reveal-overflow'>
+                    <motion.span
+                        variants={text_split_reveal}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true }}>
+                        Let’s work
+                    </motion.span>
+                </h2>
+                <h2 className='split-reveal-overflow'>
+                    <motion.span
+                        variants={text_split_reveal}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true }}
+                        custom={0.13}>
+                        together 👋
+                    </motion.span>
                 </h2>
             </div>
             <div className={`${style['clb-contact-form']} container`}>
                 <form action="">
                     <div className={`${style['form-item']}`}>
-                        <h5>01</h5>
-                        <h4>Your name</h4>
+                        <h5 className='split-reveal-overflow'>
+                            <motion.span
+                                variants={text_split_reveal}
+                                initial="initial"
+                                whileInView="animate"
+                                // viewport={{ once: true }}
+                                custom={0.2}
+                            >
+                                01
+                            </motion.span>
+                        </h5>
+                        <h4 className='split-reveal-overflow'>
+                            <motion.span
+                                variants={text_split_reveal}
+                                initial="initial"
+                                whileInView="animate"
+                                // viewport={{ once: true }}
+                                custom={0.25}
+                            >
+                                Your name
+                            </motion.span>
+                        </h4>
 
                         <input type="text" className={`form-control ${style['clb-form-input']}`} placeholder="John Doe *" />
                     </div>
