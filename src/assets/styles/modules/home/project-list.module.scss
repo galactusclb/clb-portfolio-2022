@@ -37,10 +37,14 @@ section.clb-section{
         .clb-projects{
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr .5fr;
+            // grid-template-rows: 1fr 1fr .5fr;
             grid-gap: 77px;
             margin-top: 7rem;
+            // margin-bottom: 150px;
             
+            & .project-card:not(:first-child:nth-last-child(1)) {
+                // margin-bottom: 400px;
+            }
 
             .project-card{
                  &:nth-child(even){
