@@ -1,6 +1,8 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 import style from 'assets/styles/modules/about-me/section-education.module.scss'
+import { text_split_reveal } from 'animations/common-animation'
 
 const SectionEducation = () => {
 
@@ -8,7 +10,16 @@ const SectionEducation = () => {
         <section className={`${style['section-main']} container`}>
             <div className="row">
                 <div className={`${style['section-left']} col-lg-9`}>
-                    <h3>Education </h3>
+                    <h3 className='split-reveal-overflow'>
+                        <motion.span
+                            variants={text_split_reveal}
+                            initial="initial"
+                            whileInView="animate"
+                            viewport={{ once: true }}>
+
+                            Education
+                        </motion.span>
+                    </h3>
 
                     <div className="clb-item-with-inline-img d-flex flex-row flex-nowrap mt-5">
                         <div className="item-img-wrapper"></div>
