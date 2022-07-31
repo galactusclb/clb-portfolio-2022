@@ -100,7 +100,15 @@ const ProjectsList = () => {
                                     <div className={`${style['project-card-inner']}`}>
                                         <div className={`${style['project-card-header']} d-flex align-items-end justify-content-end`} style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/project-images/clb@2x-b7a156f86c4e9dd166cbcaba23dc53cb.jpg.webp)` }}>
                                             <div className={`${style['project-showcase']}`}>
-                                                <img src={`${process.env.PUBLIC_URL}/images/project-images/${item?.project_images?.img}`} alt={item?.project_images?.alt_text} />
+                                                <motion.div
+                                                    variants={text_split_reveal}
+                                                    initial="initial"
+                                                    whileInView="animate"
+                                                    viewport={{ once: true }}
+                                                    custom={0}
+                                                >
+                                                    <img src={`${process.env.PUBLIC_URL}/images/project-images/${item?.project_images?.img}`} alt={item?.project_images?.alt_text} />
+                                                </motion.div>
                                             </div>
                                         </div>
 
@@ -110,8 +118,8 @@ const ProjectsList = () => {
                                                     variants={text_split_reveal}
                                                     initial="initial"
                                                     whileInView="animate"
-                                                    // viewport={{ once: true }}
-                                                    custom={0}
+                                                    viewport={{ once: true }}
+                                                    custom={0.08}
                                                 >
                                                     {item?.project_title}
                                                 </motion.span>
@@ -126,8 +134,8 @@ const ProjectsList = () => {
                                                                     variants={text_split_reveal}
                                                                     initial="initial"
                                                                     whileInView="animate"
-                                                                    // viewport={{ once: true }}
-                                                                    custom={0.08}
+                                                                    viewport={{ once: true }}
+                                                                    custom={0.12}
                                                                 >#{tag}
                                                                 </motion.span>
                                                             </span>
@@ -142,7 +150,7 @@ const ProjectsList = () => {
                                                         variants={text_split_reveal_line}
                                                         initial="initial"
                                                         whileInView="animate"
-                                                        // viewport={{ once: true }}
+                                                        viewport={{ once: true }}
                                                         custom={0.2}
                                                         className='reveal-text'>
                                                         {item?.project_brief}

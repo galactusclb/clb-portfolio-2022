@@ -22,7 +22,7 @@ function App() {
   const size = useWindowSize()
 
   const Is_SKEW_ENABLED = true
-  const SKEW_AMOUNT = 5
+  const SKEW_AMOUNT = 4.5
 
   const skewConfigs = {
     ease: 0.07,
