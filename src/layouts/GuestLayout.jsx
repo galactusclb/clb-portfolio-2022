@@ -9,7 +9,7 @@ import { Transition } from 'libs/providers/TransitionContext';
 
 import routes from './RoutesMap';
 
-const GuestLayout = () => {
+const GuestLayout = ({ setInvokeBodyHeightFunc }) => {
     // const [loading, setLoading] = useState(true)
     const { isPageLoading, setPageLoading } = useContext(Transition);
 
@@ -31,8 +31,13 @@ const GuestLayout = () => {
 
     useEffect(() => {
         // console.log('location state : ', location?.pathname);
-        setPageLoading(true)
+        // setPageLoading(true)
     }, [location?.pathname])
+
+    // for invoke skewScrollingFunction
+    useEffect(() => {
+        setInvokeBodyHeightFunc(`${location?.pathname} ${!isPageLoading}`)
+    }, [location?.pathname, isPageLoading])
 
     return (
         <AnimateSharedLayout type="crossfade">

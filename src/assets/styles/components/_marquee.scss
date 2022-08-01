@@ -12,12 +12,13 @@ $move-final: calc(-72%);
     display: flex;
     position: relative;
     transform: translateX($move-initial);
-    animation: marquee 15s linear infinite;
+    animation: marquee 20s linear infinite;
     animation-play-state: paused;
+    will-change: transform; 
 
     @media (min-width: $layout-breakpoint-large) {
       transform: translate3d(calc(-25% + 10vw), 0, 0);
-      animation: marquee-lg 5s linear infinite;
+      animation: marquee-lg 20s linear infinite;
       animation-play-state: paused;
     }
   }
