@@ -58,7 +58,7 @@ const ProjectsList = () => {
     ])
 
 
-    const [filteredProjects, setFilteredProjects] = useState([])
+    const [filteredProjects, setFilteredProjects] = useState(projects)
 
     const onFilterProjects = (type = 'all') => {
         if (type == 'all') {

@@ -8,7 +8,7 @@ const ProjectScreenshot = () => {
 
             <div className="container">
                 <div className={`${style['section-details']}`}>
-                    <h3>Increasing the conversion rate</h3>
+                    <h3>Simple, Clean & More Sales</h3>
 
                     <p className=''>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet incidunt officiis est error. Facilis perspiciatis, repudiandae vitae iure quam sequi quis cum omnis esse doloremque? Veniam impedit non neque quis.</p>
                 </div>
