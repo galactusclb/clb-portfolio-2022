@@ -22,9 +22,13 @@ export const TransitionProvider = ({ children }) => {
 
     const [isPageLoading, setPageLoading] = useState('initial');
 
+    const [InvokeBodyHeightFunc, setInvokeBodyHeightFunc] = useState(null)
+
     const TransitionContextValue = {
+        InvokeBodyHeightFunc,
+        setInvokeBodyHeightFunc,
         isPageLoading,
-        setPageLoading
+        setPageLoading,
     };
 
     // return (

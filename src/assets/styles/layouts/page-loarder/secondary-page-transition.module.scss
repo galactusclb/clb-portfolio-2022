@@ -32,6 +32,10 @@
 
 	.text-wrapper {
 		position: relative;
+		display: block;
+
+		// remove ready
+		width: 80%;
 
 		.text {
 			position: absolute;
@@ -43,6 +47,10 @@
 			line-height: 12rem;
 			letter-spacing: 3rem;
 			text-transform: uppercase;
+
+			// remove ready
+			width: 100%;
+			text-align: center;
 
 			&:is(.text-1, .text-2, .text-4, .text-5) {
 				color: rgba(0, 0, 0, 0);

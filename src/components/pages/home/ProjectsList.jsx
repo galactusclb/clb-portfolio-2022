@@ -5,6 +5,7 @@ import style from 'assets/styles/modules/home/project-list.module.scss'
 import { useNavigate } from 'react-router-dom';
 import { text_split_reveal } from 'animations/common-animation';
 import { text_split_reveal_line } from 'animations/about-me/animation_hero';
+import { useEffect } from 'react';
 
 const ProjectsList = () => {
     let navigate = useNavigate();
@@ -38,22 +39,35 @@ const ProjectsList = () => {
             project_title: 'Tastymock',
             project_tags: ['Concept project', 'UI design'],
             project_images: {
-                img: 'koeta-home.webp',
-                alt_text: 'koeta-home'
+                img: 'tastymock.png',
+                alt_text: 'tastymock-home'
             },
             project_brief: 'We did a complete redesign of Oxstreet online shop mobile experience: products exposure, catalogue, checkout and payment process.',
             navigate_url: '/project',
+            is_featured: true
         },
         {
             type: 'ui_design',
             project_title: 'KOETA',
-            project_tags: ['Concept project'],
+            project_tags: ['Client project', 'UI Design'],
             project_images: {
                 img: 'koeta-home.webp',
                 alt_text: 'koeta-home'
             },
             project_brief: 'We did a complete redesign of Oxstreet online shop mobile experience: products exposure, catalogue, checkout and payment process.',
             navigate_url: null,
+            is_featured: true
+        },
+        {
+            type: 'development',
+            project_title: 'HiruWater',
+            project_tags: ['Client project', 'Full-Stack Dev'],
+            project_images: {
+                img: 'tastymock.png',
+                alt_text: 'tastymock-home'
+            },
+            project_brief: 'We did a complete redesign of Oxstreet online shop mobile experience: products exposure, catalogue, checkout and payment process.',
+            navigate_url: '/project',
         },
     ])
 
@@ -62,7 +76,8 @@ const ProjectsList = () => {
 
     const onFilterProjects = (type = 'all') => {
         if (type == 'all') {
-            setFilteredProjects(projects)
+            // setFilteredProjects(projects)
+            setFeaturedProjects()
         } else {
             setFilteredProjects(projects?.filter((item, index) => {
                 return item?.type == type
@@ -70,6 +85,16 @@ const ProjectsList = () => {
         }
 
     }
+
+    const setFeaturedProjects = () => {
+        setFilteredProjects(projects?.filter((item, index) => {
+            return item?.is_featured == true
+        }))
+    }
+
+    // useEffect(() => {
+    //     setFeaturedProjects()
+    // })
 
     return (
         <section className={`container ${style['clb-section']} px-0`}>

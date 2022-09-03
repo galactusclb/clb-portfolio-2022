@@ -5,10 +5,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './assets/styles/main.scss';
 
 import GuestLayout from "layouts/GuestLayout";
-import { TransitionProvider } from "libs/providers/TransitionContext";
+import { Transition, TransitionProvider } from "libs/providers/TransitionContext";
 import ScrollToTop from "helpers/ScrollToTop";
 import useWindowSize from "hooks/useWindowSize";
 import { useState } from "react";
+import { useContext } from "react";
 
 function App() {
 
@@ -17,7 +18,8 @@ function App() {
   const scrollContainerRef = useRef()
 
   // for re-invoke setBodyHeight() function
-  const [InvokeBodyHeightFunc, setInvokeBodyHeightFunc] = useState(null)
+  // const [InvokeBodyHeightFunc, setInvokeBodyHeightFunc] = useState(null)
+  const { InvokeBodyHeightFunc, setInvokeBodyHeightFunc } = useContext(Transition)
 
   const size = useWindowSize()
 
@@ -69,16 +71,16 @@ function App() {
   }
 
   return (
+    // <TransitionProvider>
     <div ref={appRef} className='App'>
       <div ref={scrollContainerRef} className="scroll-container">
-        <TransitionProvider>
-          <BrowserRouter>
-            <ScrollToTop />
-            <GuestLayout setInvokeBodyHeightFunc={setInvokeBodyHeightFunc} />
-          </BrowserRouter>
-        </TransitionProvider>
+        <BrowserRouter>
+          <ScrollToTop />
+          <GuestLayout setInvokeBodyHeightFunc={setInvokeBodyHeightFunc} />
+        </BrowserRouter>
       </div>
     </div>
+    // </TransitionProvider>
   );
 }
 
