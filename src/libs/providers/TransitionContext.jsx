@@ -20,7 +20,7 @@ export const TransitionProvider = ({ children }) => {
     //     setPageLoading(false)
     // }
 
-    const [isPageLoading, setPageLoading] = useState(true);
+    const [isPageLoading, setPageLoading] = useState('initial');
 
     const TransitionContextValue = {
         isPageLoading,
