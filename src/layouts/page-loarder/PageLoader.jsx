@@ -1,10 +1,10 @@
 import React, { useContext, useEffect } from 'react'
 import style from 'assets/styles/layouts/page-loarder/page-loader.module.scss'
-import { Transition } from 'libs/providers/TransitionContext';
+import { StoreContext } from 'libs/providers/StoreContext';
 import { AnimatePresence, motion } from 'framer-motion';
 
 const PageLoader = ({ EndBackgroundColor = null, title = "less is more" }) => {
-    const { setPageLoading } = useContext(Transition);
+    const { setPageLoading } = useContext(StoreContext);
 
     useEffect(() => {
         const timer = setTimeout(() => {

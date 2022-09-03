@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './assets/styles/main.scss';
 
 import GuestLayout from "layouts/GuestLayout";
-import { Transition, TransitionProvider } from "libs/providers/TransitionContext";
+import { StoreContext } from "libs/providers/StoreContext";
 import ScrollToTop from "helpers/ScrollToTop";
 import useWindowSize from "hooks/useWindowSize";
 import { useState } from "react";
@@ -19,7 +19,7 @@ function App() {
 
   // for re-invoke setBodyHeight() function
   // const [InvokeBodyHeightFunc, setInvokeBodyHeightFunc] = useState(null)
-  const { InvokeBodyHeightFunc, setInvokeBodyHeightFunc } = useContext(Transition)
+  const { InvokeBodyHeightFunc, setInvokeBodyHeightFunc } = useContext(StoreContext)
 
   const size = useWindowSize()
 

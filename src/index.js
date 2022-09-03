@@ -2,21 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import reportWebVitals from './reportWebVitals';
-import Footer from 'layouts/footer/footer'
 
-import {
-  BrowserRouter as Router,
-} from "react-router-dom";
-import Header from 'layouts/header/header.jsx';
-import { TransitionProvider } from 'libs/providers/TransitionContext.jsx';
+import { StoreContextProvider } from 'libs/providers/StoreContext.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <Router> */}
-    <TransitionProvider>
+    <StoreContextProvider>
       <App />
-    </TransitionProvider>
+    </StoreContextProvider>
 
     {/* </Router> */}
   </React.StrictMode>
