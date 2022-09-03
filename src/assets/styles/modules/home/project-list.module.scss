@@ -43,7 +43,11 @@ section.clb-section {
 			// margin-bottom: 150px;
 
 			& .project-card:not(:first-child:nth-last-child(1)) {
-				// margin-bottom: 400px;
+				// margin-bottom: 300px;
+			}
+
+			& .project-card:nth-last-child(1):nth-child(even) {
+				margin-bottom: 300px;
 			}
 
 			.project-card {

@@ -10,9 +10,9 @@ import { StoreContext } from 'libs/providers/StoreContext';
 import routes from './RoutesMap';
 import SecondaryPageTransition from './page-loarder/SecondaryPageTransition';
 
-const GuestLayout = ({ setInvokeBodyHeightFunc }) => {
+const GuestLayout = () => {
     // const [loading, setLoading] = useState(true)
-    const { isPageLoading, setPageLoading } = useContext(StoreContext);
+    const { isPageLoading, setPageLoading, setInvokeBodyHeightFunc } = useContext(StoreContext);
 
     const location = useLocation()
 

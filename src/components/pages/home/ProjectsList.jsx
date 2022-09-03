@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 import style from 'assets/styles/modules/home/project-list.module.scss'
-import { useNavigate } from 'react-router-dom';
 import { text_split_reveal } from 'animations/common-animation';
 import { text_split_reveal_line } from 'animations/about-me/animation_hero';
-import { useEffect } from 'react';
 
 const ProjectsList = () => {
     let navigate = useNavigate();
@@ -63,8 +62,8 @@ const ProjectsList = () => {
             project_title: 'HiruWater',
             project_tags: ['Client project', 'Full-Stack Dev'],
             project_images: {
-                img: 'tastymock.png',
-                alt_text: 'tastymock-home'
+                img: 'hiruwater.png',
+                alt_text: 'Hiruwater-home'
             },
             project_brief: 'We did a complete redesign of Oxstreet online shop mobile experience: products exposure, catalogue, checkout and payment process.',
             navigate_url: '/project',
@@ -87,9 +86,10 @@ const ProjectsList = () => {
     }
 
     const setFeaturedProjects = () => {
-        setFilteredProjects(projects?.filter((item, index) => {
-            return item?.is_featured == true
-        }))
+        // setFilteredProjects(projects?.filter((item, index) => {
+        //     return item?.is_featured == true
+        // }))
+        setFilteredProjects(projects)
     }
 
     // useEffect(() => {

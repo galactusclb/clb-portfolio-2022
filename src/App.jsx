@@ -76,7 +76,7 @@ function App() {
       <div ref={scrollContainerRef} className="scroll-container">
         <BrowserRouter>
           <ScrollToTop />
-          <GuestLayout setInvokeBodyHeightFunc={setInvokeBodyHeightFunc} />
+          <GuestLayout />
         </BrowserRouter>
       </div>
     </div>
