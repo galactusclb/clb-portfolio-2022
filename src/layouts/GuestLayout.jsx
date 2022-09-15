@@ -5,14 +5,14 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import Footer from './footer/footer';
 import Header from './header/header';
 import PageLoader from './page-loarder/PageLoader';
-import { Transition } from 'libs/providers/TransitionContext';
+import { StoreContext } from 'libs/providers/StoreContext';
 
 import routes from './RoutesMap';
 import SecondaryPageTransition from './page-loarder/SecondaryPageTransition';
 
-const GuestLayout = ({ setInvokeBodyHeightFunc }) => {
+const GuestLayout = () => {
     // const [loading, setLoading] = useState(true)
-    const { isPageLoading, setPageLoading } = useContext(Transition);
+    const { isPageLoading, setPageLoading, setInvokeBodyHeightFunc } = useContext(StoreContext);
 
     const location = useLocation()
 
@@ -41,7 +41,8 @@ const GuestLayout = ({ setInvokeBodyHeightFunc }) => {
     useEffect(() => {
         // console.log('location state : ', location?.pathname);
         if (isPageLoading !== 'initial') {
-            setPageLoading(true)
+            // !here 
+            // setPageLoading(true)
         }
     }, [location?.pathname])
 

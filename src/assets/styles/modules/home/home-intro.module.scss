@@ -1,19 +1,26 @@
 @import "assets/styles/abstracts/_variables.scss";
 
-section.clb-section{
+section.clb-section {
+	padding-top: clamp(5em, 21vh, 12em);
+	// padding-bottom: clamp(5em, 21vh, 12em);
 
-    padding-top: clamp(5em, 21vh, 12em);
-    // padding-bottom: clamp(5em, 21vh, 12em);
+	h3 {
+		font-size: 4.5rem;
+		// font-weight: 300;
+	}
 
-    h3{
-        font-size: 4.5rem;
-        // font-weight: 300;
-    }
+	p {
+		font-size: 1.8rem;
+		width: 85%;
+		line-height: 3.2rem;
+		color: #828283;
+	}
 
-    p{
-        font-size: 1.8rem;
-        width: 85%;
-        line-height: 3.2rem;
-        color: #828283;
-    }
+	@media (max-width: 576px) {
+		padding-inline: 2em;
+
+		p {
+			width: unset;
+		}
+	}
 }

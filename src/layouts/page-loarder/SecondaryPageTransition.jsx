@@ -1,11 +1,11 @@
 import React, { useContext, useEffect } from 'react'
 import style from 'assets/styles/layouts/page-loarder/secondary-page-transition.module.scss'
-import { Transition } from 'libs/providers/TransitionContext';
+import { StoreContext } from 'libs/providers/StoreContext';
 import { AnimatePresence, motion } from 'framer-motion';
 
 const SecondaryPageTransition = ({ EndBackgroundColor = null, title = "less is more" }) => {
     // title = "GET YOUR SH*T DONE"
-    const { setPageLoading } = useContext(Transition);
+    const { setPageLoading } = useContext(StoreContext);
 
     useEffect(() => {
         const timer = setTimeout(() => {

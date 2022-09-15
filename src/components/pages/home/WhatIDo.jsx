@@ -48,7 +48,7 @@ const WhatIDo = () => {
                     </h3>
 
                     <div className={`row ${style['work-list']}`}>
-                        <div className="col-4">
+                        <div className="col-md-4">
                             <h5 className='split-reveal-overflow'>
                                 <motion.span
                                     variants={text_split_reveal}
@@ -82,11 +82,11 @@ const WhatIDo = () => {
                                 viewport={{ once: true }}
                                 custom={0.6}
                                 className='reveal-text mt-5'>
-                                With a solid track record in designing websites and apps, I deliver strong and user-friendly digital designs. Solid company branding is the foundation of any succesful website.
+                                A strong foundation is essential for any project. I deliver beautiful and intuitive designs that align with your brand's essence. I believe usability and aesthetics go hand-in-hand to make better products.
                             </motion.p>
                         </div>
 
-                        <div className="col-4">
+                        <div className="col-md-4">
                             <h5 className='split-reveal-overflow'>
                                 <motion.span
                                     variants={text_split_reveal}
@@ -122,10 +122,11 @@ const WhatIDo = () => {
                                 viewport={{ once: true }}
                                 className='reveal-text mt-5'>
                                 I build scalable websites from scratch that fit seamlessly with design. My focus is on micro animations, transitions and interaction. For content management I use Kirby CMS.
+                                {/* Using the latest web dev techs, I build pixel-perfect, fast and accessible websites. I specialise in creative interactions and transitions. */}
                             </motion.p>
                         </div>
 
-                        <div className="col-4">
+                        <div className="col-md-4">
                             <h5 className='split-reveal-overflow'>
                                 <motion.span
                                     variants={text_split_reveal}
@@ -161,6 +162,7 @@ const WhatIDo = () => {
                                 custom={0.6 + 0.15}
                                 className='reveal-text mt-5'>
                                 A complete website from concept to implementation, that's what makes me stand out. My great sense for design and my development skills enable me to create kick-ass projects.
+                                {/* This is my most preferred service as it allows the entire website creation—from concept to final site—to be seamless and ultra-fast. */}
                             </motion.p>
                         </div>
                     </div>

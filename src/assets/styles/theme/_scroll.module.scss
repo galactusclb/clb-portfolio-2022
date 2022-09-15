@@ -1,9 +1,10 @@
-::-webkit-scrollbar{
+::-webkit-scrollbar {
 	background-color: var(--bg-color-placeholder);
 }
 
 ::-webkit-scrollbar:horizontal {
 	width: 10px;
+	height: 4px;
 }
 
 ::-webkit-scrollbar:vertical {
