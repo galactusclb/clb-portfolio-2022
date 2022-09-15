@@ -11,15 +11,29 @@ section.clb-section {
 			font-size: 10rem;
 			max-width: 85%;
 		}
+
+		@media (max-width: 576px) {
+			padding-block: clamp(5em, 15vh, 8em);
+
+			h2 {
+				font-size: 5rem;
+				font-weight: 700;
+				max-width: unset;
+			}
+		}
 	}
 
 	.clb-project-list {
 		.clb-project-category {
+			width: 100%;
+			overflow-x: auto;
+			padding-bottom: 1rem;
+
 			button {
 				-webkit-box-shadow: inset 0px 0px 0px 1px $color-border;
 				box-shadow: inset 0px 0px 0px 1px $color-border;
 				border-radius: 3em;
-				min-width: 1em;
+				min-width: min-content;
 				height: 4.25em;
 				display: flex;
 				align-items: center;

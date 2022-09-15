@@ -4,7 +4,9 @@ export const StoreContext = createContext();
 
 export const StoreContextProvider = ({ children }) => {
 
-    const [isPageLoading, setPageLoading] = useState('initial');
+    // const [isPageLoading, setPageLoading] = useState('initial');
+    // !here 
+    const [isPageLoading, setPageLoading] = useState(false);
 
     const [InvokeBodyHeightFunc, setInvokeBodyHeightFunc] = useState(null)
 

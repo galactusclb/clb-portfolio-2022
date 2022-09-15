@@ -123,7 +123,7 @@ const ProjectsList = () => {
                 </h2>
             </div>
             <div className={`${style['clb-project-list']} container`}>
-                <div className={`${style['clb-project-category']} d-flex`} style={{ gap: "1.5rem" }}>
+                <div className={`${style['clb-project-category']} d-flex flex-row -flex-nowrap`} style={{ gap: "1.5rem" }}>
                     {
                         categories && categories?.map((item, key) => {
                             return (

@@ -48,7 +48,7 @@ const WhatIDo = () => {
                     </h3>
 
                     <div className={`row ${style['work-list']}`}>
-                        <div className="col-4">
+                        <div className="col-md-4">
                             <h5 className='split-reveal-overflow'>
                                 <motion.span
                                     variants={text_split_reveal}
@@ -86,7 +86,7 @@ const WhatIDo = () => {
                             </motion.p>
                         </div>
 
-                        <div className="col-4">
+                        <div className="col-md-4">
                             <h5 className='split-reveal-overflow'>
                                 <motion.span
                                     variants={text_split_reveal}
@@ -126,7 +126,7 @@ const WhatIDo = () => {
                             </motion.p>
                         </div>
 
-                        <div className="col-4">
+                        <div className="col-md-4">
                             <h5 className='split-reveal-overflow'>
                                 <motion.span
                                     variants={text_split_reveal}

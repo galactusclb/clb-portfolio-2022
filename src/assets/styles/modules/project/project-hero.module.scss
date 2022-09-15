@@ -48,6 +48,11 @@
 				line-height: 90%;
 				font-weight: 700;
 				letter-spacing: -0.3rem;
+				overflow: hidden;
+
+				span {
+					display: inline-block;
+				}
 			}
 		}
 
@@ -56,6 +61,11 @@
 				font-size: 5rem;
 				line-height: 90%;
 				font-weight: 400;
+				overflow: hidden;
+
+				span {
+					display: inline-block;
+				}
 			}
 		}
 
@@ -63,8 +73,17 @@
 			gap: 1.2rem;
 
 			.tag {
-				color: var(--color-primary);
-				font-size: 1.8rem;
+				p {
+					font-size: 1.8rem;
+					line-height: 100%;
+					margin-bottom: 0;
+					overflow: hidden;
+
+					span {
+						color: var(--color-primary);
+						display: inline-block;
+					}
+				}
 			}
 		}
 
