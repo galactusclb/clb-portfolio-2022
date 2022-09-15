@@ -80,7 +80,7 @@ section.clb-section {
 						position: relative;
 						min-height: 400px;
 						width: 100%;
-						background: red;
+						background: #ededed;
 						background-size: cover;
 						background-repeat: no-repeat;
 						overflow: hidden;
@@ -157,6 +157,10 @@ section.clb-section {
 					}
 
 					.project-card-inner {
+						.project-card-header {
+							min-height: 250px;
+						}
+
 						.project-card-body {
 							.project-info {
 								.project-info-right {
