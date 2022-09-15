@@ -8,9 +8,9 @@ const ProjectMobile = () => {
 
             <div className="container">
                 <div className={`${style['section-details']}`}>
-                    <h3>Increasing the conversion rate</h3>
+                    <h3>Enhanced Mobile Experience</h3>
 
-                    <p className=''>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet incidunt officiis est error. Facilis perspiciatis, repudiandae vitae iure quam sequi quis cum omnis esse doloremque? Veniam impedit non neque quis.</p>
+                    <p className=''>In user testing, we found out that users were frustrated by the old menu design. The new nav gives registered users one-click access to the leagues and teams that matter to them. Live games are also featured prominently in the new design.</p>
                 </div>
             </div>
 

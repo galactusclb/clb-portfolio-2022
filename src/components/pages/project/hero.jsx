@@ -12,8 +12,11 @@ const ProjectHero = () => {
             {/* <div className={`${style['section-left']}`}>
                 <img src={`${process.env.PUBLIC_URL}/images/project-images/clb@2x-b7a156f86c4e9dd166cbcaba23dc53cb.jpg.webp`} alt="koeta-home" className='' />
         </div>  */}
-            <div className={`${style['section-right']} d-flex flex-column justify-content-end`}>
-                <div className={`${style['h1-wrapper']} d-flex flex-column`}>
+            <div className={`${style['section-right']} d-flex flex-column justify-content-end mx-auto`}>
+                <div className={`${style['h2-wrapper']} d-flex flex-column`}>
+                    <h2>Your favorite food, delivered</h2>
+                </div>
+                <div className={`${style['h1-wrapper']} d-flex flex-column mt-5`}>
                     <h1>Tastymock</h1>
                 </div>
                 <div className={`${style['tags-list']} d-flex mt-4`}>
@@ -24,16 +27,17 @@ const ProjectHero = () => {
                         #UI design
                     </div>
                 </div>
-                <div className={`${style['section-bottom']} d-flex flex-column align-items-start`}>
+                {/* <div className={`${style['section-bottom']} d-flex flex-column align-items-start`}>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, nemo veritatis, quia eius, cum laudantium quasi deserunt quis inventore accusantium veniam.
+                        Your favorite food, delivered
                     </p>
-                </div>
+                </div> */}
 
 
 
             </div >
             <div className={`${style['floating-btn']} d-flex justify-content-end align-items-end`}>
+
                 <MagneticDOM ref={hoverRef} >
                     <button type='button' className={`clb-btn-circle row justify-content-center align-items-center mt-0`} style={{ width: 180 }} onClick={() => console.log('clicked 2')}>
                         <span

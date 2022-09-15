@@ -1,26 +1,25 @@
 @import "assets/styles/abstracts/_variables.scss";
 
-.clb-main{
-    // padding-bottom: clamp(4em, 10vh, 12em);
-    
-    .section-details{
-        // margin-top: clamp(4em, 10vh, 8em);
-        margin-top: clamp(4em, 15vh, 12em);
-        margin-bottom: clamp(4em, 15vh, 12em);
+.clb-main {
+	// padding-bottom: clamp(4em, 10vh, 12em);
 
+	.section-details {
+		// margin-top: clamp(4em, 10vh, 8em);
+		margin-top: clamp(4em, 15vh, 12em);
+		margin-bottom: clamp(4em, 15vh, 12em);
 
-        h3{
-            font-weight: 600;
-            font-size: 3rem;
-        }
+		h3 {
+			font-weight: 600;
+			font-size: 3rem;
+		}
 
-        p{
-            max-width: 60%;
-            margin-top: 4rem;
-        }
-    }
+		p {
+			max-width: 60%;
+			margin-top: 4rem;
+		}
+	}
 
-    .section-container-fluid-bg{
-
-    }
+	.section-container-fluid-bg {
+		min-height: 90vh;
+	}
 }

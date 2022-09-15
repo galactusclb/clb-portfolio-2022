@@ -5,47 +5,57 @@ import style from 'assets/styles/modules/project/project-hero.module.scss'
 const ProjectSection_1 = () => {
     return (
         <div className={`container-fluid px-0`}>
-            <div className={`three-divided-section`}>
+            <div className={`clb-meta-wrap`}>
                 <div className="container">
-                    <div className={`row section-wrapper`}>
-                        <div className="col-4">
+                    <div className={`row section-wrapper v2`}>
+                        <div className="col-3">
                             <h5>
                                 Type
                             </h5>
 
-                            <h4>
-                                {/* Type */}
-                            </h4>
-
-                            <p className="mt-5">
+                            <h4 className="mt-4">
                                 Concept project
-                            </p>
-                        </div>
-
-                        <div className="col-4">
-                            <h5>
-                                02
-                            </h5>
-                            <h4>
-                                Web Development
                             </h4>
 
-                            {/* <p className="mt-5">
-                                I build scalable websites from scratch that fit seamlessly with design. My focus is on micro animations, transitions and interaction. For content management I use Kirby CMS.
-                            </p> */}
+
                         </div>
 
-                        <div className="col-4">
+                        <div className="col-3">
                             <h5>
-                                03
+                                Expertise
                             </h5>
-                            <h4>
-                                Full-Stack Development
+                            <h4 className="mt-4">
+                                Development
                             </h4>
+                        </div>
 
-                            {/* <p className="mt-5">
-                                A complete website from concept to implementation, that's what makes me stand out. My great sense for design and my development skills enable me to create kick-ass projects.
-                            </p> */}
+                        <div className="col-3">
+                            <h5>
+                                Platforms
+                            </h5>
+                            <h4 className="mt-4">
+                                Web,iOS and API
+                            </h4>
+                        </div>
+
+                        <div className="col-3">
+                            <h5>
+                                Interested?
+                            </h5>
+
+                            <h4 className="mt-4">
+                                <a href="" className='clb-link-text'>
+                                    <span className='inner-text'>
+                                        Try TastyMock
+                                    </span>
+
+                                    <div className="clb-link-lines">
+                                        <div className="clb-link-lines_bg"></div>
+                                        <div className="clb-link-lines_solid"></div>
+                                    </div>
+
+                                </a>
+                            </h4>
                         </div>
                     </div>
                 </div>

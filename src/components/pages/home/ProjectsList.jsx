@@ -12,24 +12,29 @@ const ProjectsList = () => {
     const [categories, setcategories] = useState([
         {
             title: 'All',
+            value: 'all',
             active: true
         },
         {
             title: 'Development',
+            value: 'development',
             active: false
         },
         {
             title: 'UI design',
+            value: 'ui_design',
             active: false
         },
         {
             title: 'Illustration',
+            value: 'illustration',
             active: false
         }
     ])
 
     const [projects, setProjects] = useState([
         {
+            type: 'development',
             project_title: 'Tastymock',
             project_tags: ['Concept project', 'UI design'],
             project_images: {
@@ -40,6 +45,7 @@ const ProjectsList = () => {
             navigate_url: '/project',
         },
         {
+            type: 'ui_design',
             project_title: 'KOETA',
             project_tags: ['Concept project'],
             project_images: {
@@ -50,6 +56,20 @@ const ProjectsList = () => {
             navigate_url: null,
         },
     ])
+
+
+    const [filteredProjects, setFilteredProjects] = useState(projects)
+
+    const onFilterProjects = (type = 'all') => {
+        if (type == 'all') {
+            setFilteredProjects(projects)
+        } else {
+            setFilteredProjects(projects?.filter((item, index) => {
+                return item?.type == type
+            }))
+        }
+
+    }
 
     return (
         <section className={`container ${style['clb-section']} px-0`}>
@@ -82,7 +102,7 @@ const ProjectsList = () => {
                     {
                         categories && categories?.map((item, key) => {
                             return (
-                                <button className={`${item?.active && style['active']} btn`} key={key}>
+                                <button className={`${item?.active && style['active']} btn`} key={key} onClick={() => { onFilterProjects(item?.value) }}>
                                     {item?.title}
                                 </button>
                             )
@@ -93,7 +113,7 @@ const ProjectsList = () => {
                 <div className={`${style['clb-projects']}`} style={{ marginBottom: (projects?.length % 2 == 0) ? '400px' : '150px' }}>
 
                     {
-                        projects && projects?.map((item, key) => {
+                        filteredProjects && filteredProjects?.map((item, key) => {
 
                             return (
                                 <div className={`${style['project-card']}`} key={key}>
