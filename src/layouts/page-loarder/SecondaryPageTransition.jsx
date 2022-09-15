@@ -1,15 +1,16 @@
 import React, { useContext, useEffect } from 'react'
-import style from 'assets/styles/layouts/page-loarder/page-loader.module.scss'
+import style from 'assets/styles/layouts/page-loarder/secondary-page-transition.module.scss'
 import { Transition } from 'libs/providers/TransitionContext';
 import { AnimatePresence, motion } from 'framer-motion';
 
-const PageLoader = ({ EndBackgroundColor = null, title = "less is more" }) => {
+const SecondaryPageTransition = ({ EndBackgroundColor = null, title = "less is more" }) => {
+    // title = "GET YOUR SH*T DONE"
     const { setPageLoading } = useContext(Transition);
 
     useEffect(() => {
         const timer = setTimeout(() => {
             setPageLoading(false);
-        }, 4800);
+        }, 3000);
         return () => clearTimeout(timer);
     });
 
@@ -38,12 +39,6 @@ const PageLoader = ({ EndBackgroundColor = null, title = "less is more" }) => {
                             <div className={`${style['text']} ${style['text-3']}`}>{title}</div>
                             <div className={`${style['text']} ${style['text-4']}`}>{title}</div>
                             <div className={`${style['text']} ${style['text-5']}`}>{title}</div>
-                            <div className={`${style['text']} ${style['text-6']}`}>{title}</div>
-                            <div className={`${style['text']} ${style['text-7']}`}>{title}</div>
-                            <div className={`${style['text']} ${style['text-8']}`}>{title}</div>
-                            <div className={`${style['text']} ${style['text-9']}`}>{title}</div>
-                            <div className={`${style['text']} ${style['text-10']}`}>{title}</div>
-                            <div className={`${style['text']} ${style['text-11']}`}>{title}</div>
                         </div>
                     </div>
 
@@ -53,4 +48,4 @@ const PageLoader = ({ EndBackgroundColor = null, title = "less is more" }) => {
     )
 }
 
-export default PageLoader
+export default SecondaryPageTransition
