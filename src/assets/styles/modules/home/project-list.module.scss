@@ -143,6 +143,31 @@ section.clb-section {
 				// padding: 6rem 0;
 				background: red;
 			}
+
+			@media (max-width: 576px) {
+				grid-template-columns: 1fr;
+
+				& .project-card:nth-last-child(1):nth-child(even) {
+					margin-bottom: unset !important;
+				}
+
+				.project-card {
+					&:nth-child(even) {
+						top: unset;
+					}
+
+					.project-card-inner {
+						.project-card-body {
+							.project-info {
+								.project-info-right {
+									margin-left: auto;
+									width: unset;
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }

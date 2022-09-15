@@ -190,7 +190,7 @@ const ProjectsList = () => {
                                             </div>
 
                                             <div className={`${style['project-info']} row mt-5`}>
-                                                <div className={`${style['project-info-left']} col`}>
+                                                <div className={`${style['project-info-left']} col-md`}>
                                                     <motion.p
                                                         variants={text_split_reveal_line}
                                                         initial="initial"
