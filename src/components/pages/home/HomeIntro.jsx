@@ -7,7 +7,7 @@ import { text_split_reveal_line } from 'animations/about-me/animation_hero'
 
 const HomeIntro = () => {
     return (
-        <section className={`container ${style['clb-section']}`}>
+        <section className={`container ${style['clb-section']} px-4`}>
             <h3 className='split-reveal-overflow'>
                 <motion.span
                     variants={text_split_reveal}

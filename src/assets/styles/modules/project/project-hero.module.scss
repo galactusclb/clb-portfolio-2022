@@ -101,3 +101,30 @@
 		}
 	}
 }
+
+@media (max-width: 576px) {
+	.clb-main {
+		.floating-btn {
+			margin-right: unset;
+			margin-top: 5rem;
+		}
+
+		.section-right {
+			margin-top: 32vh;
+			text-align: center;
+
+			.h1-wrapper {
+				h1 {
+					font-size: 6rem;
+				}
+			}
+
+			.h2-wrapper {
+				h2 {
+					font-size: 4rem;
+					line-height: 120%;
+				}
+			}
+		}
+	}
+}

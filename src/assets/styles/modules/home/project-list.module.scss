@@ -13,7 +13,8 @@ section.clb-section {
 		}
 
 		@media (max-width: 576px) {
-			padding-block: clamp(5em, 15vh, 8em);
+			padding-top: clamp(5em, 15vh, 8em);
+			padding-bottom: clamp(5em, 15vh, 8em);
 
 			h2 {
 				font-size: 5rem;

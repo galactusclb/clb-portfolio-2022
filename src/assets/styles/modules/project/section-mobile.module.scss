@@ -28,3 +28,24 @@
 		}
 	}
 }
+
+@media (max-width: 576px) {
+	.clb-main {
+		.section-details {
+			margin-bottom: clamp(4em, 6vh, 12em);
+
+			p {
+				max-width: unset;
+			}
+		}
+
+		.section-mobile-screenshots {
+			margin-bottom: clamp(4em, 10vh, 12em);
+			min-height: 230px;
+
+			.mobile-device {
+				// width: 400px;
+			}
+		}
+	}
+}

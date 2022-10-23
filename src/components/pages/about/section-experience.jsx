@@ -8,7 +8,7 @@ import { li_animation, ul_animation } from 'animations/about-me/animaion_experie
 const SectionExperience = () => {
 
     return (
-        <section className={`${style['section-main']} container`}>
+        <section className={`${style['section-main']} container px-4 px-sm-0`}>
             <div className="row">
                 <div className={`${style['section-left']} col-lg-9`}>
                     <h3

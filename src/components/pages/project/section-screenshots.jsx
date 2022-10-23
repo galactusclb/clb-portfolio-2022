@@ -6,7 +6,7 @@ const ProjectScreenshot = () => {
     return (
         <section className={`${style['clb-main']} container-fluid px-0`}>
 
-            <div className="container">
+            <div className="container  px-4  px-sm-0">
                 <div className={`${style['section-details']}`}>
                     <h3>Simple, Clean & More Sales</h3>
 
