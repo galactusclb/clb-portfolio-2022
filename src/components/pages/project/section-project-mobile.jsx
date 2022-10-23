@@ -6,7 +6,7 @@ const ProjectMobile = () => {
     return (
         <section className={`${style['clb-main']} container-fluid px-0`}>
 
-            <div className="container">
+            <div className="container px-4 px-sm-0">
                 <div className={`${style['section-details']}`}>
                     <h3>Enhanced Mobile Experience</h3>
 
@@ -16,13 +16,13 @@ const ProjectMobile = () => {
 
             <div className={`${style['section-mobile-screenshots']} container`}>
                 <div className="row">
-                    <div className={`${style['mobile-device']} col-lg-4`}>
+                    <div className={`${style['mobile-device']} col-4 col-lg-4`}>
                         <img src={`${process.env.PUBLIC_URL}/images/project-images/TastyMock_001.png`} alt="" className='img-fluid' />
                     </div>
-                    <div className={`${style['mobile-device']} col-lg-4`}>
+                    <div className={`${style['mobile-device']} col-4 col-lg-4`}>
                         <img src={`${process.env.PUBLIC_URL}/images/project-images/TastyMock_002.png`} alt="" className='img-fluid' />
                     </div>
-                    <div className={`${style['mobile-device']} col-lg-4`}>
+                    <div className={`${style['mobile-device']} col-4 col-lg-4`}>
                         <img src={`${process.env.PUBLIC_URL}/images/project-images/TastyMock_003.png`} alt="" className='img-fluid' />
                     </div>
                 </div>

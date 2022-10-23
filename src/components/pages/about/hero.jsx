@@ -11,8 +11,8 @@ const AboutHero = () => {
     return (
         <div className={`${style['clb-main']} container row align-items-end mx-auto`}>
             <div className="col">
-                <div className="row">
-                    <div className={`${style['section-left']} col-lg-5 d-flex align-items-end`}>
+                <div className="row flex-column-reverse flex-sm-column-reverse">
+                    <div className={`${style['section-left']} col-lg-5 d-flex align-items-sm-start align-items-end mt-5 mt-sm-0`}>
                         <div className={`${style['img-wrapper']}`}>
                             <motion.div
                                 variants={text_split_reveal}
@@ -25,7 +25,7 @@ const AboutHero = () => {
                         </div>
                     </div>
                     <div className={`${style['section-right']} col-lg-7`}>
-                        <div className={`${style['h1-wrapper']} d-flex flex-column align-items-end`}>
+                        <div className={`${style['h1-wrapper']} d-flex flex-column align-items-start align-items-sm-end`}>
                             <h1>
                                 <motion.span
                                     variants={text_split_reveal}

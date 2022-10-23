@@ -33,3 +33,15 @@
 		}
 	}
 }
+
+@media (max-width: 576px) {
+	.clb-section {
+		border-radius: 0px;
+		min-height: 50vh;
+		margin: 0;
+
+		h1 {
+			font-size: 4rem;
+		}
+	}
+}

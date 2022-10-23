@@ -43,7 +43,7 @@ const ProjectHero = () => {
                         </motion.span>
                     </h1>
                 </div>
-                <div className={`${style['tags-list']} d-flex mt-4`}>
+                <div className={`${style['tags-list']} d-flex justify-content-center justify-content-sm-start mt-4`}>
                     <div className={`${style['tag']}`}>
                         <p>
                             <motion.span
@@ -82,29 +82,30 @@ const ProjectHero = () => {
 
             </div >
             <div className={`${style['floating-btn']} d-flex justify-content-end align-items-end`}>
-
-                <MagneticDOM ref={hoverRef} >
-                    <motion.button type='button' className={`clb-btn-circle row justify-content-center align-items-center mt-0`}
-                        style={{ width: 180 }}
-                        initial={{ scale: 0 }}
-                        animate={{ scale: 1 }}
-                        transition={{ ease: 'easeIn', duration: 0.8, delay: 1.8 }}
-                        onClick={() => {
-                            navigate('/about')
-                        }}>
-                        <motion.span
-                            className='text-center'
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{
-                                ease: "easeInOut",
-                                duration: 1,
-                                delay: 2.8
+                <span className='mx-auto'>
+                    <MagneticDOM ref={hoverRef} >
+                        <motion.button type='button' className={`clb-btn-circle row justify-content-center align-items-center mt-0`}
+                            style={{ width: 180, height: 180 }}
+                            initial={{ scale: 0 }}
+                            animate={{ scale: 1 }}
+                            transition={{ ease: 'easeIn', duration: 0.8, delay: 1.8 }}
+                            onClick={() => {
+                                navigate('/about')
                             }}>
-                            Live site
-                        </motion.span>
-                    </motion.button>
-                </MagneticDOM>
+                            <motion.span
+                                className='text-center'
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{
+                                    ease: "easeInOut",
+                                    duration: 1,
+                                    delay: 2.8
+                                }}>
+                                Live site
+                            </motion.span>
+                        </motion.button>
+                    </MagneticDOM>
+                </span>
             </div>
 
 

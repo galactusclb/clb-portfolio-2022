@@ -1,133 +1,199 @@
 @import "assets/styles/abstracts/_variables.scss";
 
 // $hero-background-color : #999D9E;
-$hero-background-color : #dd9348;
+$hero-background-color: #dd9348;
 
-$hero-black : #1B1C1E;
+$hero-black: #1b1c1e;
 
-.clb-main{
-    position: relative;
-    max-height: 100vh;
-    overflow: hidden;
-    background: $hero-background-color;
-    color: $hero-black;
-    // background: red;
-    // color: #fff;
+.clb-main {
+	position: relative;
+	max-height: 100vh;
+	overflow: hidden;
+	background: $hero-background-color;
+	color: $hero-black;
+	// background: red;
+	// color: #fff;
 
-    .clb-hero-img{
-        position: absolute;
-        height: 100vh;
-        left: -5px;
-        bottom: -30px;
-        // transform: translate(-50%);
-        pointer-events: none;
+	.clb-hero-img {
+		position: absolute;
+		height: 100vh;
+		left: -5px;
+		bottom: -30px;
+		// transform: translate(-50%);
+		pointer-events: none;
 
-        img{
-            height: 100%;
-        }
-    }
+		img {
+			height: 100%;
+		}
+	}
 
-    .clb-hero-center{
-        min-height: 63vh;
-        margin-top: 10vh;
-        
-        h4{
-            &:nth-child(1){
-                font-size: 2.5rem;
-            }
-            
-            &:nth-child(2){
-                font-size: 7rem;
-                font-weight: 600;
-            }
-            
-        }
+	.clb-hero-center {
+		min-height: 63vh;
+		margin-top: 10vh;
 
-        p{
-            font-size: 3.5em;
-        }
+		h4 {
+			&:nth-child(1) {
+				font-size: 2.5rem;
+			}
 
-        .abuot-me{
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            color: $hero-background-color;
-            background: $hero-black;
-            font-size: 1.8rem;
-            transition: 0.5s;
-            cursor: pointer;
+			&:nth-child(2) {
+				font-size: 7rem;
+				font-weight: 600;
+			}
+		}
 
-            
-            &:hover{
-                background: $white;
-                
-                span{
-                    color: $hero-black;
-                }
-            }
-            
-            span{
-                color: var(--text-color-white);
-            }
-        }
-    }
+		p {
+			font-size: 3.5em;
+		}
 
-    .clb-hero-bottom{
-        // position: absolute;
-        position: relative;
-        bottom: 60px;
+		.abuot-me {
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			color: $hero-background-color;
+			background: $hero-black;
+			font-size: 1.8rem;
+			transition: 0.5s;
+			cursor: pointer;
 
-        .clb-hero-bottom-inner{
-            position: relative;
+			&:hover {
+				background: $white;
 
-            .clb-bottom-div{
-                position: relative;
-                top: 0;
-                // display: block;
-                width: 500px;
-                max-width: 500px;
-                height: 30rem;
-                background:rgba(250, 250, 250, 0);
-                
-               
-                overflow: hidden;
-            }
-        }
+				span {
+					color: $hero-black;
+				}
+			}
 
-    }
+			span {
+				color: var(--text-color-white);
+			}
+		}
+	}
+
+	.clb-hero-bottom {
+		// position: absolute;
+		position: relative;
+		bottom: 60px;
+
+		.clb-hero-bottom-inner {
+			position: relative;
+
+			.clb-bottom-div {
+				position: relative;
+				top: 0;
+				// display: block;
+				width: 500px;
+				max-width: 500px;
+				height: 30rem;
+				background: rgba(250, 250, 250, 0);
+
+				overflow: hidden;
+			}
+		}
+	}
 }
 
-.marquee-text{
-    position: absolute;
-    // bottom: -40px;
+.marquee-text {
+	position: absolute;
+	// bottom: -40px;
 
-    &.outline-text{
-        // color: #ffffff00 !important;
-        // -webkit-text-stroke : 3px $background !important;
-
-    }
+	&.outline-text {
+		// color: #ffffff00 !important;
+		// -webkit-text-stroke : 3px $background !important;
+	}
 }
 
-.row-title,.row-letter{
-    font-family: "Monument Extended";
-    font-size: 20rem;
-    font-weight: 700;
-    position: relative;
-    letter-spacing: 1rem;
-    display: inline-block;
-    white-space: nowrap;
-    line-height: 1.7;
+.row-title,
+.row-letter {
+	font-family: "Monument Extended";
+	font-size: 20rem;
+	font-weight: 700;
+	position: relative;
+	letter-spacing: 1rem;
+	display: inline-block;
+	white-space: nowrap;
+	line-height: 1.7;
 
-    // font-size: 26rem;
-    // font-weight: 500;
-    // letter-spacing: -0.8rem;
-    // line-height: 1.25;
+	// font-size: 26rem;
+	// font-weight: 500;
+	// letter-spacing: -0.8rem;
+	// line-height: 1.25;
 
-    // transparent outline text
-    color: #ffffff00 !important;
-    -webkit-text-stroke : 8px $background !important;
+	// transparent outline text
+	color: #ffffff00 !important;
+	-webkit-text-stroke: 8px $background !important;
 }
 
-.row-title{
-    padding: 0 5vw;
+.row-title {
+	padding: 0 5vw;
+}
+
+@media (max-width: 576px) {
+	.clb-main {
+		height: 105vh;
+
+		.clb-hero-img {
+			height: 105%;
+			// left: -5px;
+			width: 100%;
+			// bottom: -80px;
+
+			img {
+				width: auto;
+				height: 80%;
+				bottom: 0;
+				object-fit: cover;
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%) !important;
+			}
+		}
+
+		.clb-hero-center {
+			position: absolute;
+			bottom: 0;
+			min-height: unset;
+			margin-top: 0;
+			z-index: 2;
+
+			h4 {
+				&:nth-child(1) {
+					font-size: 2.5rem;
+				}
+
+				&:nth-child(2) {
+					font-size: 7rem;
+					font-weight: 600;
+					line-height: 7rem;
+				}
+			}
+
+			p {
+				font-size: 3.5em;
+			}
+
+			.abuot-me {
+				width: 150px;
+				height: 150px;
+				border-radius: 50%;
+				color: $hero-background-color;
+				background: $hero-black;
+				font-size: 1.8rem;
+				transition: 0.5s;
+				cursor: pointer;
+
+				&:hover {
+					background: $white;
+
+					span {
+						color: $hero-black;
+					}
+				}
+
+				span {
+					color: var(--text-color-white);
+				}
+			}
+		}
+	}
 }

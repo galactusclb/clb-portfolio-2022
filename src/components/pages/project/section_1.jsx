@@ -6,9 +6,9 @@ const ProjectSection_1 = () => {
     return (
         <div className={`container-fluid px-0`}>
             <div className={`clb-meta-wrap`}>
-                <div className="container">
-                    <div className={`row section-wrapper v2`}>
-                        <div className="col-3">
+                <div className="container px-4 px-sm-0">
+                    <div className={`row flex-column flex-md-row section-wrapper v2`}>
+                        <div className="col-md-3">
                             <h5>
                                 Type
                             </h5>
@@ -20,7 +20,7 @@ const ProjectSection_1 = () => {
 
                         </div>
 
-                        <div className="col-3">
+                        <div className="col-md-3">
                             <h5>
                                 Expertise
                             </h5>
@@ -29,7 +29,7 @@ const ProjectSection_1 = () => {
                             </h4>
                         </div>
 
-                        <div className="col-3">
+                        <div className="col-md-3">
                             <h5>
                                 Platforms
                             </h5>
@@ -38,7 +38,7 @@ const ProjectSection_1 = () => {
                             </h4>
                         </div>
 
-                        <div className="col-3">
+                        <div className="col-md-3">
                             <h5>
                                 Interested?
                             </h5>

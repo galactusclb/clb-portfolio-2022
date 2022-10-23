@@ -21,7 +21,7 @@ const SectionSkill = () => {
     ])
 
     return (
-        <section className={`${style['section-main']} container`}>
+        <section className={`${style['section-main']} container px-4 px-sm-0`}>
             <div className="row">
                 <div className={`${style['section-left']} col-lg-9`}>
                     <h3 className='split-reveal-overflow'>
@@ -59,7 +59,7 @@ const SectionSkill = () => {
 
 
                 </div>
-                <div className={`${style['section-right']} col-lg`}>
+                <div className={`${style['section-right']} col-lg d-flex flex-column align-items-end align-items-sm-start`}>
 
                     <MagneticDOM ref={GG} >
                         <motion.button type='button' className={`clb-btn-circle row justify-content-center align-items-center mt-5`}

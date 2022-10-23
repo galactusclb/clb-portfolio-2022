@@ -7,7 +7,7 @@ import { text_split_reveal } from 'animations/common-animation'
 const SectionEducation = () => {
 
     return (
-        <section className={`${style['section-main']} container`}>
+        <section className={`${style['section-main']} container px-4 px-sm-0`}>
             <div className="row">
                 <div className={`${style['section-left']} col-lg-9`}>
                     <h3 className='split-reveal-overflow'>
@@ -21,7 +21,7 @@ const SectionEducation = () => {
                         </motion.span>
                     </h3>
 
-                    <div className="clb-item-with-inline-img d-flex flex-row flex-nowrap mt-5">
+                    <div className="clb-item-with-inline-img d-flex flex-column flex-sm-row flex-nowrap mt-5">
                         <div className="item-img-wrapper"></div>
                         <div className="item-title-wrapper">
                             <h4 className='split-reveal-overflow '>
@@ -47,7 +47,7 @@ const SectionEducation = () => {
                         </div>
                     </div>
 
-                    <div className="clb-item-with-inline-img d-flex flex-row flex-nowrap mt-5">
+                    <div className="clb-item-with-inline-img d-flex  flex-column flex-sm-row flex-nowrap mt-5">
                         <div className="item-img-wrapper"></div>
                         <div className="item-title-wrapper">
                             <h4 className='split-reveal-overflow '>
